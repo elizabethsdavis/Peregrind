@@ -15,7 +15,14 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="73w-q6-t5T" kind="relationship" relationship="viewControllers" id="d47-AG-w7E"/>
@@ -152,7 +159,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" selectedImage="Camera Icon" id="td9-Pk-ag3"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="Camera Icon" id="td9-Pk-ag3">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyK-zQ-VXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,7 +198,7 @@
         <scene sceneID="S48-JL-Yzm">
             <objects>
                 <navigationController title="Newfeed Navigation" automaticallyAdjustsScrollViewInsets="NO" id="73w-q6-t5T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aE5-zu-fyv"/>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" image="Falcon Icon" id="aE5-zu-fyv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="raX-de-gFr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -209,7 +218,7 @@
         <scene sceneID="2WA-tJ-0vE">
             <objects>
                 <navigationController title="Profile Navigation" automaticallyAdjustsScrollViewInsets="NO" id="1SE-4b-6ID" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5XZ-Sj-Igf"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="User Icon" id="5XZ-Sj-Igf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wbt-rD-Vis">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -227,6 +236,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Camera Icon" width="256" height="256"/>
+        <image name="Camera Icon" width="25" height="25"/>
+        <image name="Falcon Icon" width="25" height="25"/>
+        <image name="User Icon" width="25" height="25"/>
     </resources>
 </document>
