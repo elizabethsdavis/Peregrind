@@ -24,7 +24,6 @@ class KakTableViewCell: UITableViewCell {
         didSet {
             updateUI();
         }
-        
     }
     
     private func updateUI() {
@@ -41,14 +40,10 @@ class KakTableViewCell: UITableViewCell {
             
             let videoURLRequest : NSURLRequest = NSURLRequest(URL: kak.videoURL)
             kakWebView.loadRequest(videoURLRequest)
-            
-            
-            
-            
         }
     }
     
-    func setProfileImageView(imageView: UIImageView) {
+    private func setProfileImageView(imageView: UIImageView) {
         imageView.layer.borderWidth=1.0
         imageView.layer.masksToBounds = false
         imageView.layer.borderColor = UIColor.whiteColor().CGColor
@@ -57,13 +52,13 @@ class KakTableViewCell: UITableViewCell {
         imageView.clipsToBounds = true
     }
     
-    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+    private func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
             completion(data: data, response: response, error: error)
             }.resume()
     }
     
-    func downloadImage(url: NSURL, toImageView imageView: UIImageView){
+    private func downloadImage(url: NSURL, toImageView imageView: UIImageView){
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
@@ -71,5 +66,4 @@ class KakTableViewCell: UITableViewCell {
             }
         }
     }
-    
 }

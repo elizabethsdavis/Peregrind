@@ -12,18 +12,18 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
 
     
     
-    @IBOutlet weak var searchTextField: UITextField! {
-        didSet {
-            searchTextField.delegate = self
-            searchTextField.text = searchText
-        }
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        searchText = textField.text
-        return true
-    }
+//    @IBOutlet weak var searchTextField: UITextField! {
+//        didSet {
+//            searchTextField.delegate = self
+//            searchTextField.text = searchText
+//        }
+//    }
+//    
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        searchText = textField.text
+//        return true
+//    }
     
  
     
@@ -42,21 +42,20 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
         ["user": "Julien Brinson", "text": "I like learning a lot :)", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/19181_10202609887128470_9124914537994045659_n.jpg?oh=40b5d4c1e86bf4a37b5843b964ceb328&oe=57BC9A1D", "video_url":"https://www.youtube.com/embed/3q8tkoqdAlU"],
     ]
     
-    var kaks = [Array<Kak>]() {
+    var kaks = Array<Kak>() {
         didSet {
             tableView.reloadData()
         }
     }
     
     func loadKaks() {
-        var kakPost = [Kak]()
+//        var kakPost = [Kak]()
         for i in 1...posts.count {
             if let kak = Kak(data: posts[i-1] as? NSDictionary) {
-                kakPost.append(kak)
+                kaks.append(kak)
             }
-            
         }
-        kaks.append(kakPost)
+//        kaks.append(kakPost)
     }
 
    
@@ -86,16 +85,19 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return kaks[section].count
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10.0
     }
 
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath)
         cell.textLabel?.text = posts[indexPath.item] as? String
-       
-        // Configure the cell...
-        let kak = kaks[indexPath.section][indexPath.row]
+
+        let kak = kaks[indexPath.section]
         
         if let kakCell = cell as? KakTableViewCell {
             kakCell.kak = kak
@@ -104,26 +106,26 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
-    // In this case I returning 140.0. You can change this value depending of your cell
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 300.0
-    }
+//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return 300.0
+//    }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        cell.contentView.backgroundColor = UIColor.clearColor()
-        
-        let whiteRoundedView : UIView = UIView(frame: CGRectMake(0, 10, self.view.frame.size.width, 120))
-        
-        whiteRoundedView.layer.backgroundColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0])
-        whiteRoundedView.layer.masksToBounds = false
-        whiteRoundedView.layer.cornerRadius = 2.0
-        whiteRoundedView.layer.shadowOffset = CGSizeMake(-1, 1)
-        whiteRoundedView.layer.shadowOpacity = 0.2
-        
-        cell.contentView.addSubview(whiteRoundedView)
-        cell.contentView.sendSubviewToBack(whiteRoundedView)
-    }
+//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//
+//        cell.contentView.backgroundColor = UIColor.whiteColor()
+//        
+//        let whiteRoundedView : UIView = UIView(frame: CGRectMake(0, 5, self.view.frame.size.width, self.view.frame.size.height))
+//    
+//        whiteRoundedView.layer.backgroundColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0])
+//        whiteRoundedView.layer.masksToBounds = false
+//        whiteRoundedView.layer.cornerRadius = 2.0
+//        whiteRoundedView.layer.shadowOffset = CGSizeMake(0, 1)
+//        whiteRoundedView.layer.shadowOpacity = 0.2
+//        
+//        cell.contentView.addSubview(whiteRoundedView)
+//        cell.contentView.sendSubviewToBack(whiteRoundedView)
+//    }
    
 
     /*

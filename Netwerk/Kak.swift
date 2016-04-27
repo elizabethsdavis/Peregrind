@@ -51,5 +51,4 @@ public class Kak: NSObject {
         static let VideoURL = "video_url"
     }
 
-
 }
