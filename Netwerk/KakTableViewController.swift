@@ -29,13 +29,13 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
     
     var posts: NSArray = [
         
-        ["user": "Elizabeth Davis", "text": "I absolutely love to learn!!!", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url":"https://www.youtube.com/embed/lMAISeUGcyY"],
+        ["user": "Elizabeth Davis", "text": "I absolutely love to learn!!!", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url":"https://www.youtube.com/embed/TsD5QJmz0gA"],
         
         ["user": "Samuel Hinshelwood", "text": "Learning is everything <3", "created_at":"04/05/2016", "id_str":"0002", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10649571_10206228274366972_5329742365679361816_n.jpg?oh=3f65c56edc39b7cebbaefa7a3ab585aa&oe=579E333D", "video_url":"https://www.youtube.com/embed/YGV6NkKDJ4o"],
         
         ["user": "Julien Brinson", "text": "I like learning a lot :)", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/19181_10202609887128470_9124914537994045659_n.jpg?oh=40b5d4c1e86bf4a37b5843b964ceb328&oe=57BC9A1D", "video_url":"https://www.youtube.com/embed/3q8tkoqdAlU"],
         
-        ["user": "Elizabeth Davis", "text": "I absolutely love to learn!!!", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url":"https://www.youtube.com/embed/lMAISeUGcyY"],
+        ["user": "Elizabeth Davis", "text": "I absolutely love to learn!!!", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url":"https://www.youtube.com/embed/TsD5QJmz0gA"],
         
         ["user": "Samuel Hinshelwood", "text": "Learning is everything <3", "created_at":"04/05/2016", "id_str":"0002", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10649571_10206228274366972_5329742365679361816_n.jpg?oh=3f65c56edc39b7cebbaefa7a3ab585aa&oe=579E333D", "video_url":"https://www.youtube.com/embed/YGV6NkKDJ4o"],
         

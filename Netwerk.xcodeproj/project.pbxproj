@@ -14,6 +14,7 @@
 		1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */; };
 		1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */; };
 		1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0DD1CD0A0340037DCFA /* Kak.swift */; };
+		1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakTableViewController.swift; sourceTree = "<group>"; };
 		1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakTableViewCell.swift; sourceTree = "<group>"; };
 		1B26A0DD1CD0A0340037DCFA /* Kak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kak.swift; sourceTree = "<group>"; };
+		1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kakCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
 				1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */,
 				1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */,
+				1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */,
 				1B26A0DD1CD0A0340037DCFA /* Kak.swift */,
 				1B26A0861CCC487C0037DCFA /* Assets.xcassets */,
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
+				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */,
 			);

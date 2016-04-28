@@ -141,7 +141,7 @@
         <!--Camera-->
         <scene sceneID="0Wz-NR-cwz">
             <objects>
-                <viewController id="dTK-6X-8s5" sceneMemberID="viewController">
+                <viewController id="dTK-6X-8s5" customClass="kakCameraViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rgr-fE-2gj"/>
                         <viewControllerLayoutGuide type="bottom" id="cVh-dx-jlw"/>
@@ -150,18 +150,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will be a camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="say-Qu-eUM">
-                                <rect key="frame" x="64" y="178" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irR-OR-Ic6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="irR-OR-Ic6" secondAttribute="trailing" id="8ZR-hk-Qlj"/>
+                            <constraint firstItem="irR-OR-Ic6" firstAttribute="bottom" secondItem="cVh-dx-jlw" secondAttribute="top" id="E8i-mE-2Qh"/>
+                            <constraint firstItem="irR-OR-Ic6" firstAttribute="leading" secondItem="ujd-kl-Jgi" secondAttribute="leading" id="Lta-1y-E75"/>
+                            <constraint firstItem="irR-OR-Ic6" firstAttribute="top" secondItem="ujd-kl-Jgi" secondAttribute="top" id="nyS-x1-Dfh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera Icon" id="td9-Pk-ag3">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="currentImage" destination="irR-OR-Ic6" id="6Nw-dK-6sp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyK-zQ-VXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
