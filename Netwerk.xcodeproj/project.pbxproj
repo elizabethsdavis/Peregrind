@@ -25,6 +25,7 @@
 		B91840301CD1D54200014BB9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918402F1CD1D54200014BB9 /* Security.framework */; };
 		B91840321CD1D54C00014BB9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */; };
 		B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840331CD1D55500014BB9 /* libz.tbd */; };
+		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		B918402F1CD1D54200014BB9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B91840331CD1D55500014BB9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeregrindTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				1B26A07D1CCC487C0037DCFA /* AppDelegate.swift */,
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
+				B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */,
 				1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */,
 				1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */,
 				1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */,
@@ -199,6 +202,7 @@
 			files = (
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
+				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */,

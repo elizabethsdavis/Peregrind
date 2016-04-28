@@ -15,13 +15,15 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
     override func viewDidLoad() {
+        print("camera view did load")
         super.viewDidLoad()
+        imagePicker.delegate = self
+        
         if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
             if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
                 imagePicker.allowsEditing = false
                 imagePicker.sourceType = .Camera
                 imagePicker.cameraCaptureMode = .Photo
-                presentViewController(imagePicker, animated: true, completion: {})
             } else {
                 print("Rear camera doesn't exist: Application cannot access the camera.")
             }
@@ -32,19 +34,39 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
         // Do any additional setup after loading the view.
     }
     
+    func displayCamera() {
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+            presentViewController(imagePicker, animated: true, completion: {})
+        }
+    }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        print("camera view will appear")
+//        super.viewWillAppear(animated)
+//        // TODO: fix bug of reappearing 
+//        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+//            presentViewController(imagePicker, animated: true, completion: {})
+//        }
+//        
+//    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("Got an image")
         if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
-            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
+            currentImage.image = pickedImage
+            
+//            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
+//            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
         }
-        imagePicker.dismissViewControllerAnimated(true, completion: {
+        imagePicker.dismissViewControllerAnimated(false, completion: {
             // Anything you want to happen when the user saves an image
         })
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         print("User canceled image")
+        // switch tab back to main screen
+        self.tabBarController?.selectedIndex = 0
         dismissViewControllerAnimated(true, completion: {
             // Anything you want to happen when the user selects cancel
         })
