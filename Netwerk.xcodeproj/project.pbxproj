@@ -15,6 +15,16 @@
 		1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */; };
 		1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0DD1CD0A0340037DCFA /* Kak.swift */; };
 		1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */; };
+		B918401C1CD1CBF700014BB9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840171CD1CBF700014BB9 /* Bolts.framework */; };
+		B918401D1CD1CBF700014BB9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840181CD1CBF700014BB9 /* Parse.framework */; };
+		B91840201CD1CBF700014BB9 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918401B1CD1CBF700014BB9 /* ParseUI.framework */; };
+		B91840261CD1D47700014BB9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840251CD1D47700014BB9 /* libsqlite3.0.tbd */; };
+		B91840281CD1D48200014BB9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840271CD1D48200014BB9 /* AudioToolbox.framework */; };
+		B918402A1CD1D4FB00014BB9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840291CD1D4FB00014BB9 /* CFNetwork.framework */; };
+		B918402E1CD1D53A00014BB9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918402D1CD1D53A00014BB9 /* QuartzCore.framework */; };
+		B91840301CD1D54200014BB9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918402F1CD1D54200014BB9 /* Security.framework */; };
+		B91840321CD1D54C00014BB9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */; };
+		B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840331CD1D55500014BB9 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,18 @@
 		1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakTableViewCell.swift; sourceTree = "<group>"; };
 		1B26A0DD1CD0A0340037DCFA /* Kak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kak.swift; sourceTree = "<group>"; };
 		1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kakCameraViewController.swift; sourceTree = "<group>"; };
+		B91840171CD1CBF700014BB9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B91840181CD1CBF700014BB9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B918401B1CD1CBF700014BB9 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Netwerk-Bridging-Header.h"; sourceTree = "<group>"; };
+		B91840251CD1D47700014BB9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B91840271CD1D48200014BB9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B91840291CD1D4FB00014BB9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B918402B1CD1D50D00014BB9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B918402D1CD1D53A00014BB9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B918402F1CD1D54200014BB9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B91840331CD1D55500014BB9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +57,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */,
+				B91840321CD1D54C00014BB9 /* SystemConfiguration.framework in Frameworks */,
+				B91840301CD1D54200014BB9 /* Security.framework in Frameworks */,
+				B918402E1CD1D53A00014BB9 /* QuartzCore.framework in Frameworks */,
+				B918402A1CD1D4FB00014BB9 /* CFNetwork.framework in Frameworks */,
+				B91840281CD1D48200014BB9 /* AudioToolbox.framework in Frameworks */,
+				B91840261CD1D47700014BB9 /* libsqlite3.0.tbd in Frameworks */,
+				B918401D1CD1CBF700014BB9 /* Parse.framework in Frameworks */,
+				B918401C1CD1CBF700014BB9 /* Bolts.framework in Frameworks */,
+				B91840201CD1CBF700014BB9 /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +78,7 @@
 			children = (
 				1B26A07C1CCC487C0037DCFA /* Netwerk */,
 				1B26A07B1CCC487B0037DCFA /* Products */,
+				B91840211CD1CBFC00014BB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +102,27 @@
 				1B26A0861CCC487C0037DCFA /* Assets.xcassets */,
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
 				1B26A08B1CCC487C0037DCFA /* Info.plist */,
+				B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */,
 			);
 			path = Netwerk;
+			sourceTree = "<group>";
+		};
+		B91840211CD1CBFC00014BB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B91840331CD1D55500014BB9 /* libz.tbd */,
+				B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */,
+				B918402F1CD1D54200014BB9 /* Security.framework */,
+				B918402D1CD1D53A00014BB9 /* QuartzCore.framework */,
+				B918402B1CD1D50D00014BB9 /* CoreLocation.framework */,
+				B91840291CD1D4FB00014BB9 /* CFNetwork.framework */,
+				B91840271CD1D48200014BB9 /* AudioToolbox.framework */,
+				B91840251CD1D47700014BB9 /* libsqlite3.0.tbd */,
+				B91840171CD1CBF700014BB9 /* Bolts.framework */,
+				B91840181CD1CBF700014BB9 /* Parse.framework */,
+				B918401B1CD1CBF700014BB9 /* ParseUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +157,7 @@
 				TargetAttributes = {
 					1B26A0791CCC487B0037DCFA = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7X2XZ6L5E5;
 					};
 				};
 			};
@@ -263,10 +316,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethsdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Netwerk/Netwerk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -274,10 +335,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethsdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Netwerk/Netwerk-Bridging-Header.h";
 			};
 			name = Release;
 		};

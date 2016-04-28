@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Register and connect with Parse backend.
+        Parse.setApplicationId("oNWlowHHo7G4KbhnA4zyDjygMZ38avt3zBFBfUni", clientKey: "mxkEtd1rMq94xG1URi0J9qQeHdHB8QTrGLnXf81e")
+        
         // Override point for customization after application launch.
         return true
     }
