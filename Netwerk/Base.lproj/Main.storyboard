@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="293"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="292.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="293"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
@@ -239,6 +239,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xh8-6g-goC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-650" y="1425"/>
+        </scene>
+        <!--Post New Kak View Controller-->
+        <scene sceneID="60y-TG-PR1">
+            <objects>
+                <viewController id="MvF-ea-d8U" customClass="PostNewKakViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r2G-Xr-S71"/>
+                        <viewControllerLayoutGuide type="bottom" id="QgS-rD-Jbe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fdR-Pl-MwN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-SK-6Sg">
+                                <rect key="frame" x="244" y="507" width="112" height="54"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.76862745099999996" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="K0c-vv-CEM"/>
+                                    <constraint firstAttribute="height" constant="54" id="m6S-Bp-6eE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedShare:" destination="MvF-ea-d8U" eventType="touchUpInside" id="daK-9x-gBy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-gf-Wi0">
+                                <rect key="frame" x="247" y="327" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qam-aY-ETD">
+                                <rect key="frame" x="26" y="85" width="548" height="220"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What did you learn today?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TP8-ka-3Kg">
+                                <rect key="frame" x="26" y="348" width="548" height="134"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="tfa-Xg-rdS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qam-aY-ETD" firstAttribute="top" secondItem="r2G-Xr-S71" secondAttribute="bottom" constant="21" id="6CA-c3-ayz"/>
+                            <constraint firstItem="TP8-ka-3Kg" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="8rT-wC-YtM"/>
+                            <constraint firstItem="pcj-gf-Wi0" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="EXD-0i-iEt"/>
+                            <constraint firstItem="TP8-ka-3Kg" firstAttribute="top" secondItem="pcj-gf-Wi0" secondAttribute="bottom" id="Eqc-k9-8uW"/>
+                            <constraint firstItem="QgS-rD-Jbe" firstAttribute="top" secondItem="hcV-SK-6Sg" secondAttribute="bottom" constant="39" id="F2X-lN-3Rb"/>
+                            <constraint firstItem="TP8-ka-3Kg" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="Fwd-nX-X0D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TP8-ka-3Kg" secondAttribute="trailing" constant="6" id="Ljp-xZ-d9L"/>
+                            <constraint firstItem="qam-aY-ETD" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="MDU-j7-JFb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qam-aY-ETD" secondAttribute="trailing" constant="6" id="NM1-7X-a2s"/>
+                            <constraint firstItem="qam-aY-ETD" firstAttribute="leading" secondItem="fdR-Pl-MwN" secondAttribute="leadingMargin" constant="6" id="WCr-rT-nUz"/>
+                            <constraint firstItem="hcV-SK-6Sg" firstAttribute="centerX" secondItem="qam-aY-ETD" secondAttribute="centerX" id="fiw-fa-SWA"/>
+                            <constraint firstItem="TP8-ka-3Kg" firstAttribute="leading" secondItem="fdR-Pl-MwN" secondAttribute="leadingMargin" constant="6" id="h0b-gS-RvP"/>
+                            <constraint firstItem="pcj-gf-Wi0" firstAttribute="top" secondItem="qam-aY-ETD" secondAttribute="bottom" constant="22" id="tXQ-Iw-SZ7"/>
+                            <constraint firstItem="hcV-SK-6Sg" firstAttribute="top" secondItem="TP8-ka-3Kg" secondAttribute="bottom" constant="25" id="zXL-Eq-uFB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kdj-9v-15e">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HXr-Y8-inQ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="kakButton" destination="hcV-SK-6Sg" id="YKN-pH-eAh"/>
+                        <outlet property="kakCaption" destination="TP8-ka-3Kg" id="9aT-aV-3zn"/>
+                        <outlet property="kakImage" destination="qam-aY-ETD" id="H1r-W2-QDf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J40-L7-4Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="2203"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9eB-VQ-Ihj">
+            <objects>
+                <navigationController storyboardIdentifier="PostNewKakNavigation" automaticallyAdjustsScrollViewInsets="NO" id="h9U-vy-3in" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKP-jG-S8K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MvF-ea-d8U" kind="relationship" relationship="rootViewController" id="ZPF-vF-Z6n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0T-qy-aAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="2203"/>
         </scene>
     </scenes>
     <resources>

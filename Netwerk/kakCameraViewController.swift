@@ -58,8 +58,25 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
 //            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
 //            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
         }
+        
+        
         imagePicker.dismissViewControllerAnimated(false, completion: {
             // Anything you want to happen when the user saves an image
+            print("dismissedViewController")
+            
+            if let postKakNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("PostNewKakNavigation") as? UINavigationController {
+//                print("presenting new view controller")
+//                if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
+//                    postKakController.kakImage.image = self.currentImage.image
+//                }
+                self.presentViewController(postKakNavigationController, animated: true, completion: {
+                    print("presenting kak navigation controller")
+                    if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
+                        print(postKakController)
+                        postKakController.kakImage.image = self.currentImage.image
+                    }
+                })
+            }
         })
     }
     

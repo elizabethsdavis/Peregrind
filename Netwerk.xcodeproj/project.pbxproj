@@ -26,6 +26,7 @@
 		B91840321CD1D54C00014BB9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */; };
 		B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840331CD1D55500014BB9 /* libz.tbd */; };
 		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
+		B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B91840331CD1D55500014BB9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeregrindTabBarController.swift; sourceTree = "<group>"; };
+		B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostNewKakViewController.swift; path = ../PostNewKakViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		1B26A07C1CCC487C0037DCFA /* Netwerk */ = {
 			isa = PBXGroup;
 			children = (
+				B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */,
 				1B26A07D1CCC487C0037DCFA /* AppDelegate.swift */,
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
 				B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */,
@@ -205,6 +208,7 @@
 				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
+				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
