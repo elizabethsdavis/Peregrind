@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KakTableViewCell: UITableViewCell {
+class KakTableViewCell: UITableViewCell, UIWebViewDelegate {
 
 
     @IBOutlet weak var kakScreenNameLabel: UILabel!
@@ -18,6 +18,7 @@ class KakTableViewCell: UITableViewCell {
     @IBOutlet weak var kakWebView: UIWebView!
     
     @IBOutlet weak var kakProfileImageView: UIImageView!
+    
     
     
     var kak: Kak? {
@@ -38,13 +39,27 @@ class KakTableViewCell: UITableViewCell {
                           toImageView: kakProfileImageView)
             setProfileImageView(kakProfileImageView)
             
+            // TODO: change to am image view
             let videoURLRequest : NSURLRequest = NSURLRequest(URL: kak.videoURL)
+            kakWebView.delegate = self
             kakWebView.loadRequest(videoURLRequest)
         }
     }
     
+    func webViewDidFinishLoad(webView: UIWebView) {
+        // TODO: make this better
+        let contentSize = webView.scrollView.contentSize
+        let viewSize = webView.bounds.size
+        
+        let rw = viewSize.width / contentSize.width
+        
+        webView.scrollView.minimumZoomScale = rw
+        webView.scrollView.maximumZoomScale = rw
+        webView.scrollView.zoomScale = rw
+    }
+    
     private func setProfileImageView(imageView: UIImageView) {
-        imageView.layer.borderWidth=1.0
+        imageView.layer.borderWidth = 1.0
         imageView.layer.masksToBounds = false
         imageView.layer.borderColor = UIColor.whiteColor().CGColor
         imageView.layer.cornerRadius = 13
