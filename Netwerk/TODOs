@@ -1,16 +1,26 @@
 Right now I've got the images loading from the ParseTutorial app on Parse
 
-TODOs
+broad TODOs
 - get images + comments uploaded to backend
 - once have username + facebook photos, upload those and pull for kik wall
+
 
 
 - log in storyboard
 - log in by Facebook (can use Parse for this)
 
 
+- support videos in addition to images (worse comes to worst we just don't do this)
+
+small fixes TODOs:
+- fix cancel button in upload image flow
+- make sure that long descriptions don't overflow outside of the box
+- make the image displayed on the captioning page in the upload flow not weird dimensions (storyboard issue)
+- only allow the app to work in portrait (or fix views to work in landscape)
+
 nice to haves:
 - profile page
 - like/comments
+
 - creation of "projects"
 
