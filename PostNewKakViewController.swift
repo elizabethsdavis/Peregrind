@@ -28,6 +28,16 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
     
+    @IBAction func tappedCancel(sender: AnyObject) {
+        print("tapped cancel")
+        // switch tab back to main screen
+        self.presentingViewController!.tabBarController?.selectedIndex = 0
+//        self.tabBarController?.selectedIndex = 0
+        dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user selects cancel
+        })
+    }
+    
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {

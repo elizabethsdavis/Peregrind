@@ -10,7 +10,8 @@ import UIKit
 
 class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var currentImage: UIImageView!
+//    @IBOutlet weak var currentImage: UIImageView!
+    var pickedImage: UIImage? = nil
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
@@ -36,7 +37,9 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
     
     func displayCamera() {
         if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-            presentViewController(imagePicker, animated: true, completion: {})
+            presentViewController(imagePicker, animated: true, completion: {
+                self.tabBarController?.selectedIndex = 0
+            })
         }
     }
     
@@ -52,28 +55,19 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("Got an image")
-        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            currentImage.image = pickedImage
-            
-//            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
-//            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
-        }
-        
+        pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         
         imagePicker.dismissViewControllerAnimated(false, completion: {
             // Anything you want to happen when the user saves an image
             print("dismissedViewController")
             
             if let postKakNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("PostNewKakNavigation") as? UINavigationController {
-//                print("presenting new view controller")
-//                if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
-//                    postKakController.kakImage.image = self.currentImage.image
-//                }
                 self.presentViewController(postKakNavigationController, animated: true, completion: {
                     print("presenting kak navigation controller")
                     if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
                         print(postKakController)
-                        postKakController.kakImage.image = self.currentImage.image
+                        // TODO: pass image
+                        postKakController.kakImage.image = self.pickedImage
                     }
                 })
             }

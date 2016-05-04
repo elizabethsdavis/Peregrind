@@ -155,25 +155,11 @@
                     <view key="view" contentMode="scaleToFill" id="ujd-kl-Jgi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irR-OR-Ic6">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="irR-OR-Ic6" secondAttribute="trailing" id="8ZR-hk-Qlj"/>
-                            <constraint firstItem="irR-OR-Ic6" firstAttribute="bottom" secondItem="cVh-dx-jlw" secondAttribute="top" id="E8i-mE-2Qh"/>
-                            <constraint firstItem="irR-OR-Ic6" firstAttribute="leading" secondItem="ujd-kl-Jgi" secondAttribute="leading" id="Lta-1y-E75"/>
-                            <constraint firstItem="irR-OR-Ic6" firstAttribute="top" secondItem="ujd-kl-Jgi" secondAttribute="top" id="nyS-x1-Dfh"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera Icon" id="td9-Pk-ag3">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="currentImage" destination="irR-OR-Ic6" id="6Nw-dK-6sp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyK-zQ-VXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,7 +297,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kdj-9v-15e">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HXr-Y8-inQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HXr-Y8-inQ">
+                            <connections>
+                                <action selector="tappedCancel:" destination="MvF-ea-d8U" id="wCE-oC-hE9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="kakButton" destination="hcV-SK-6Sg" id="YKN-pH-eAh"/>
