@@ -1,4 +1,16 @@
 Right now I've got the images loading from the ParseTutorial app on Parse
 
 TODOs
-- fix the weirdness with the comments and profile images not displaying when the images load; I think I might just have done something weird with storyboarding the new UIImageView
+- get images + comments uploaded to backend
+- once have username + facebook photos, upload those and pull for kik wall
+
+
+- log in storyboard
+- log in by Facebook (can use Parse for this)
+
+
+nice to haves:
+- profile page
+- like/comments
+- creation of "projects"
+
