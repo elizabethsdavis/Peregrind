@@ -1,0 +1,4 @@
+Right now I've got the images loading from the ParseTutorial app on Parse
+
+TODOs
+- fix the weirdness with the comments and profile images not displaying when the images load; I think I might just have done something weird with storyboarding the new UIImageView

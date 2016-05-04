@@ -14,8 +14,9 @@ public class Kak: NSObject {
     public let user: String
     public let created: String
     public let id: String
-    public let imageURL: NSURL
-    public let videoURL: NSURL
+    public let profileImageURL: NSURL
+//    public let videoURL: NSURL
+    public var image: PFFile?
     
     init?(data: NSDictionary?)
     {
@@ -25,8 +26,8 @@ public class Kak: NSObject {
             let text = data?.valueForKeyPath(KakKey.Text) as? String,
             let created = (data?.valueForKeyPath(KakKey.Created) as? String),
             let id = data?.valueForKeyPath(KakKey.ID) as? String,
-            let imageURLString = data?.valueForKeyPath(KakKey.ImageURL) as? String,
-            let videoURLString = data?.valueForKeyPath(KakKey.VideoURL) as? String
+            let imageURLString = data?.valueForKeyPath(KakKey.ImageURL) as? String
+//            let videoURLString = data?.valueForKeyPath(KakKey.VideoURL) as? String
             
             else {
                 return nil
@@ -36,8 +37,9 @@ public class Kak: NSObject {
         self.text = text
         self.created = created
         self.id = id
-        self.imageURL = NSURL(string: imageURLString)!
-        self.videoURL = NSURL(string: videoURLString)!
+        self.profileImageURL = NSURL(string: imageURLString)!
+//        self.videoURL = NSURL(string: videoURLString)!
+        self.image = nil
  
     }
     
@@ -48,7 +50,7 @@ public class Kak: NSObject {
         static let Created = "created_at"
         static let ID = "id_str"
         static let ImageURL = "image_url"
-        static let VideoURL = "video_url"
+//        static let VideoURL = "video_url"
     }
 
 }

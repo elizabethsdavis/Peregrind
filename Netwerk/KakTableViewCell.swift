@@ -8,18 +8,20 @@
 
 import UIKit
 
-class KakTableViewCell: UITableViewCell, UIWebViewDelegate {
+class KakTableViewCell: PFTableViewCell, UIWebViewDelegate {
 
 
     @IBOutlet weak var kakScreenNameLabel: UILabel!
 
     @IBOutlet weak var kakPostLabel: UILabel!
     
-    @IBOutlet weak var kakWebView: UIWebView!
+    //@IBOutlet weak var kakWebView: UIWebView!
+    
+    // TODO: allow support for both video and image?
+    // not sure best way to do this with storyboard
+    @IBOutlet weak var kakImageView: PFImageView!
     
     @IBOutlet weak var kakProfileImageView: UIImageView!
-    
-    
     
     var kak: Kak? {
         didSet {
@@ -35,27 +37,16 @@ class KakTableViewCell: UITableViewCell, UIWebViewDelegate {
             kakPostLabel.text = kak.text
             
             kakScreenNameLabel?.text = kak.user
-            downloadImage(kak.imageURL,
+            downloadImage(kak.profileImageURL,
                           toImageView: kakProfileImageView)
             setProfileImageView(kakProfileImageView)
             
             // TODO: change to am image view
-            let videoURLRequest : NSURLRequest = NSURLRequest(URL: kak.videoURL)
-            kakWebView.delegate = self
-            kakWebView.loadRequest(videoURLRequest)
+//            let videoURLRequest : NSURLRequest = NSURLRequest(URL: kak.videoURL)
+//
+//            kakWebView.delegate = self
+//            kakWebView.loadRequest(videoURLRequest)
         }
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        // TODO: make this better
-        let contentSize = webView.scrollView.contentSize
-        let viewSize = webView.bounds.size
-        
-        let rw = viewSize.width / contentSize.width
-        
-        webView.scrollView.minimumZoomScale = rw
-        webView.scrollView.maximumZoomScale = rw
-        webView.scrollView.zoomScale = rw
     }
     
     private func setProfileImageView(imageView: UIImageView) {

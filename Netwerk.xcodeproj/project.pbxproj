@@ -27,6 +27,8 @@
 		B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840331CD1D55500014BB9 /* libz.tbd */; };
 		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
 		B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */; };
+		B9EAE9991CD9BDAF00A47C61 /* WallPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAE9981CD9BDAF00A47C61 /* WallPost.swift */; };
+		B9EAE99B1CD9CE8600A47C61 /* TODOs in Resources */ = {isa = PBXBuildFile; fileRef = B9EAE99A1CD9CE8600A47C61 /* TODOs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		B91840331CD1D55500014BB9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeregrindTabBarController.swift; sourceTree = "<group>"; };
 		B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostNewKakViewController.swift; path = ../PostNewKakViewController.swift; sourceTree = "<group>"; };
+		B9EAE9981CD9BDAF00A47C61 /* WallPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallPost.swift; sourceTree = "<group>"; };
+		B9EAE99A1CD9CE8600A47C61 /* TODOs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODOs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */,
 				1B26A07D1CCC487C0037DCFA /* AppDelegate.swift */,
+				B9EAE9981CD9BDAF00A47C61 /* WallPost.swift */,
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
 				B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */,
 				1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */,
@@ -109,6 +114,7 @@
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
 				1B26A08B1CCC487C0037DCFA /* Info.plist */,
 				B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */,
+				B9EAE99A1CD9CE8600A47C61 /* TODOs */,
 			);
 			path = Netwerk;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			files = (
 				1B26A08A1CCC487C0037DCFA /* LaunchScreen.storyboard in Resources */,
 				1B26A0871CCC487C0037DCFA /* Assets.xcassets in Resources */,
+				B9EAE99B1CD9CE8600A47C61 /* TODOs in Resources */,
 				1B26A0851CCC487C0037DCFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +217,7 @@
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */,
+				B9EAE9991CD9BDAF00A47C61 /* WallPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
