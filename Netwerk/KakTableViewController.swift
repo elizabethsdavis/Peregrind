@@ -25,8 +25,6 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
 //        return true
 //    }
     
- 
-    
     var posts: NSArray = [
         
          ["user": "Elizabeth Davis", "text": "Got the light patterns working :)", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url": "https://goo.gl/MTGtp1"],

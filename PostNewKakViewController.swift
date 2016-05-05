@@ -13,6 +13,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var kakImage: UIImageView!
     @IBOutlet weak var kakCaption: UITextView!
     @IBOutlet weak var kakButton: UIButton!
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
 
     override func viewDidLoad() {
@@ -54,7 +55,39 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func tappedShare(sender: UIButton) {
-        print("tapped share button")
+        let pictureData = UIImageJPEGRepresentation(kakImage.image!, 0.8)
+        
+        let file = PFFile(name: "image", data: pictureData!)
+        file!.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+            if succeeded {
+                // TODO: only exit on save if have error
+                print("upload succeeded!")
+                self.saveKak(file!);
+            } else {
+                // TODO: show error view
+                print("upload failed")
+            }
+            }, progressBlock: { percent in
+                print("Uploaded photo: \(percent)%")
+        })
+    }
+    
+    func saveKak(file: PFFile) {
+        let kakPost = KakPost(image: file, user: PFUser.currentUser()!, comment: self.kakCaption.text)
+        kakPost.saveInBackgroundWithBlock{ succeeded, error in
+            if succeeded {
+                print("successfully saved kak")
+                self.dismissPostKakView()
+            } else {
+                if ((error?.userInfo["error"]) != nil) {
+                    // TODO: show error
+                    print("error saving kak")
+                }
+            }
+        }
+    }
+    
+    func dismissPostKakView() {
         // dismiss current view controller
         let presentingViewController: UIViewController! = self.presentingViewController
         
@@ -67,7 +100,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         self.dismissViewControllerAnimated(false) {
             presentingViewController.dismissViewControllerAnimated(false, completion: nil)
         }
-        
     }
     
 
