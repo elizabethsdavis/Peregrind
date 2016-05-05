@@ -1,15 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tzW-3Z-dmJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Kak Login View Controller-->
+        <scene sceneID="SiL-Sa-f5f">
+            <objects>
+                <viewController storyboardIdentifier="Login View Controller" id="tzW-3Z-dmJ" customClass="KakLoginViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K1m-zy-j2o"/>
+                        <viewControllerLayoutGuide type="bottom" id="gPM-lg-tnD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nzj-u2-3et">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="EBV-F0-Df1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-W1-WcM">
+                                <rect key="frame" x="205" y="55" width="119" height="30"/>
+                                <state key="normal" title="Go to normal app"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="eaV-Be-7PM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-xq-aAO" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="221" y="446" width="158" height="30"/>
+                                <state key="normal" title="Facebook Login Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EBV-F0-Df1" firstAttribute="centerY" secondItem="jn2-xq-aAO" secondAttribute="centerY" id="2L8-Si-0Dz"/>
+                            <constraint firstItem="EBV-F0-Df1" firstAttribute="top" secondItem="Nzj-u2-3et" secondAttribute="top" id="5vd-97-7Ph"/>
+                            <constraint firstItem="gPM-lg-tnD" firstAttribute="top" secondItem="jn2-xq-aAO" secondAttribute="bottom" constant="124" id="K4N-te-HsU"/>
+                            <constraint firstItem="jn2-xq-aAO" firstAttribute="centerY" secondItem="Nzj-u2-3et" secondAttribute="centerY" id="L7z-bf-6fx"/>
+                            <constraint firstItem="jn2-xq-aAO" firstAttribute="centerX" secondItem="Nzj-u2-3et" secondAttribute="centerX" id="LTn-Hz-rnR"/>
+                            <constraint firstItem="EBV-F0-Df1" firstAttribute="centerX" secondItem="jn2-xq-aAO" secondAttribute="centerX" id="RsK-fe-XYT"/>
+                            <constraint firstItem="EBV-F0-Df1" firstAttribute="leading" secondItem="Nzj-u2-3et" secondAttribute="leading" id="VWB-vS-keu"/>
+                            <constraint firstItem="EBV-F0-Df1" firstAttribute="bottom" secondItem="gPM-lg-tnD" secondAttribute="top" id="Xfh-0c-2Cg"/>
+                            <constraint firstItem="EBV-F0-Df1" firstAttribute="leading" secondItem="Nzj-u2-3et" secondAttribute="leading" id="o7Z-uH-Ard"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2L8-Si-0Dz"/>
+                                <exclude reference="o7Z-uH-Ard"/>
+                                <exclude reference="L7z-bf-6fx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="jn2-xq-aAO" id="R9v-Aq-0av"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="Proceed After Login" id="hTD-v6-q0y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7T-pQ-Kef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1185" y="353"/>
+        </scene>
         <!--Main View-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController title="Main View" id="49e-Tb-3d3" customClass="PeregrindTabBarController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Peregrind Tab Bar Controller" title="Main View" id="49e-Tb-3d3" customClass="PeregrindTabBarController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -37,7 +93,7 @@
         <!--Kak Table View Controller-->
         <scene sceneID="EPj-gI-xRo">
             <objects>
-                <tableViewController id="Wst-yb-ZOM" customClass="KakTableViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Kak Newsfeed" id="Wst-yb-ZOM" customClass="KakTableViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="293" sectionHeaderHeight="28" sectionFooterHeight="28" id="kRv-6x-JaY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +104,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="293"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="293"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="292"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
@@ -270,7 +326,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-gf-Wi0">
                                 <rect key="frame" x="247" y="327" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qam-aY-ETD">
@@ -340,6 +396,10 @@
     <resources>
         <image name="Camera Icon" width="25" height="25"/>
         <image name="Falcon Icon" width="25" height="25"/>
+        <image name="Splash Screen" width="375" height="667"/>
         <image name="User Icon" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hTD-v6-q0y"/>
+    </inferredMetricsTieBreakers>
 </document>

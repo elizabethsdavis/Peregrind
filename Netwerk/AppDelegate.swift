@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,11 +16,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Register and connect with Parse backend.
+        
+        /* Register and connect with Parse backend. */
         Parse.setApplicationId("oNWlowHHo7G4KbhnA4zyDjygMZ38avt3zBFBfUni", clientKey: "mxkEtd1rMq94xG1URi0J9qQeHdHB8QTrGLnXf81e")
         
-        // Override point for customization after application launch.
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        var initialViewController: UIViewController
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Peregrind Tab Bar Controller") as! PeregrindTabBarController
+            initialViewController = vc
+            
+        } else {
+            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Login View Controller")
+        }
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func application(application: UIApplication,
+                     openURL url: NSURL,
+                             sourceApplication: String?,
+                             annotation: AnyObject) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(
+            application,
+            openURL: url,
+            sourceApplication: sourceApplication,
+            annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -38,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {

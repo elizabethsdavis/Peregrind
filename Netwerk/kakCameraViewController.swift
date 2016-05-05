@@ -15,7 +15,6 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
     override func viewDidLoad() {
-        print("camera view did load")
         super.viewDidLoad()
         imagePicker.delegate = self
         

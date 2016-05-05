@@ -29,11 +29,9 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y -= keyboardSize.height
         }
-        
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -70,11 +68,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
             presentingViewController.dismissViewControllerAnimated(false, completion: nil)
         }
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
