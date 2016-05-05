@@ -10,12 +10,13 @@ import UIKit
 
 public class Kak: NSObject {
     
-    public let text: String
-    public let user: String
-    public let created: String
+    public var text: String
+    public var user: String
+    public var created: String
     public let id: String
     public let imageURL: NSURL
     public let videoURL: NSURL
+    public let image: PFFile?
     
     init?(data: NSDictionary?)
     {
@@ -27,7 +28,6 @@ public class Kak: NSObject {
             let id = data?.valueForKeyPath(KakKey.ID) as? String,
             let imageURLString = data?.valueForKeyPath(KakKey.ImageURL) as? String,
             let videoURLString = data?.valueForKeyPath(KakKey.VideoURL) as? String
-            
             else {
                 return nil
             }
@@ -37,6 +37,7 @@ public class Kak: NSObject {
         self.created = created
         self.id = id
         self.imageURL = NSURL(string: imageURLString)!
+        self.image = nil
         self.videoURL = NSURL(string: videoURLString)!
  
     }

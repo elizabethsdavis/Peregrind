@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KakTableViewCell: UITableViewCell {
+class KakTableViewCell: PFTableViewCell {
 
 
     @IBOutlet weak var kakScreenNameLabel: UILabel!
@@ -17,7 +17,7 @@ class KakTableViewCell: UITableViewCell {
     
     @IBOutlet weak var kakProfileImageView: UIImageView!
     
-    @IBOutlet weak var kakImageView: UIImageView!
+    @IBOutlet weak var kakImageView: PFImageView!
     
     var kak: Kak? {
         didSet {
@@ -36,8 +36,6 @@ class KakTableViewCell: UITableViewCell {
             downloadImage(kak.imageURL,
                           toImageView: kakProfileImageView)
             setProfileImageView(kakProfileImageView)
-            
-            downloadImage(kak.videoURL, toImageView: kakImageView)
         }
     }
     

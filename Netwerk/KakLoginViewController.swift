@@ -18,6 +18,7 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
+            self.fetchUserInforFromFacebook() // TODO: remove
             performSegueWithIdentifier("Proceed After Login", sender: self)
         } else {
             self.view.addSubview(loginButton)
@@ -31,6 +32,7 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidAppear(animated: Bool) {
         if (FBSDKAccessToken.currentAccessToken() != nil || FBSDKLoginSuccess == true)
         {
+            self.fetchUserInforFromFacebook() // TODO: remove
             performSegueWithIdentifier("Proceed After Login", sender: self)
         }
     }
@@ -48,6 +50,7 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         else {
             dispatch_async(dispatch_get_main_queue()) {
+                self.fetchUserInforFromFacebook()
                 self.performSegueWithIdentifier("Proceed After Login", sender: self)
             }
             FBSDKLoginSuccess = true
@@ -63,6 +66,30 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
+    }
+    
+    // from http://stackoverflow.com/questions/30252844/how-to-get-the-username-from-facebook-in-swift
+    func fetchUserInforFromFacebook(){
+        if ((FBSDKAccessToken.currentAccessToken()) != nil){
+            
+            let request = FBSDKGraphRequest(graphPath:"me", parameters:nil)
+            request.startWithCompletionHandler({connection, result, error in
+                if error == nil {
+                    
+                    //FACEBOOK DATA IN DICTIONARY
+                    let userData = result as! NSDictionary
+                    let currentUser : PFUser = PFUser.currentUser()!
+                    currentUser.setObject(userData.objectForKey("id") as! String, forKey: "faceBookID")
+                    currentUser.setObject( userData.objectForKey("name") as! String, forKey: "fullName")
+                    currentUser.saveInBackground()
+                    
+                }else{
+                    print("Error getting facebook data")
+                    //                    self.showErrorMessage(error)
+                    //                    withcompletionHandler(success: false)
+                }
+            })
+        }
     }
 
     /*

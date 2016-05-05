@@ -175,7 +175,7 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="70" width="584" height="198"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="198" id="HiH-CY-T9b"/>
