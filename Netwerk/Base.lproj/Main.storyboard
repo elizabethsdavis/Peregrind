@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="1326" y="1339"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="ich-qp-SJS">
             <objects>
-                <viewController title="Profile" id="HXc-yc-0Z4" sceneMemberID="viewController">
+                <viewController title="Profile" id="HXc-yc-0Z4" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FEK-xn-JXo"/>
                         <viewControllerLayoutGuide type="bottom" id="87M-WN-Q5p"/>
@@ -241,16 +241,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will be a profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rp-fj-RTy">
-                                <rect key="frame" x="162" y="246" width="151" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4WN-tZ-xrE">
+                                <rect key="frame" x="8" y="72" width="584" height="560"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="seM-ot-LZR" userLabel="Username">
+                                        <rect key="frame" x="0.0" y="0.0" width="584" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hj6-zO-mON">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RvO-B6-LCf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cCN-sE-v6X"/>
+                                                            <constraint firstAttribute="height" constant="60" id="maZ-ui-xys"/>
+                                                            <constraint firstAttribute="width" constant="60" id="ucF-m0-IiQ"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="cCN-sE-v6X"/>
+                                                                <exclude reference="maZ-ui-xys"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kcu-To-cz6">
+                                                <rect key="frame" x="70" y="0.0" width="514" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-0Q-IAe" userLabel="Kak Username">
+                                                        <rect key="frame" x="0.0" y="0.0" width="514" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="75k-b4-inv"/>
+                                                            <constraint firstAttribute="height" constant="60" id="s6k-pV-baw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                        <color key="textColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="75k-b4-inv"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="293" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j0y-8p-pse">
+                                        <rect key="frame" x="0.0" y="60" width="584" height="500"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="XxY-T7-hvN"/>
+                                            <constraint firstAttribute="height" constant="420" id="e7m-K0-l6i"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userKak" rowHeight="293" id="CJZ-vA-948" customClass="ProfileViewCell" customModule="Netwerk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="584" height="293"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="CJZ-vA-948" id="n1t-5M-724">
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="292"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-Xh-bnb">
+                                                            <rect key="frame" x="4" y="8" width="580" height="285"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kak Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-fS-Z4a">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="580" height="20"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bND-AA-v9n">
+                                                                    <rect key="frame" x="0.0" y="30" width="580" height="255"/>
+                                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                                                </webView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="580" id="SEN-sI-9sZ"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="top" secondItem="n1t-5M-724" secondAttribute="topMargin" constant="-2" id="m8O-qE-aIA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5jg-Xh-bnb" secondAttribute="trailing" id="xGf-kB-Pka"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="5jg-Xh-bnb" secondAttribute="bottom" constant="-10" id="xLW-Vc-x5o"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="kakPostLabel" destination="uYS-fS-Z4a" id="reN-oe-Te1"/>
+                                                    <outlet property="kakWebView" destination="bND-AA-v9n" id="dFA-zn-6hW"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="e7m-K0-l6i"/>
+                                            </mask>
+                                        </variation>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="584" id="jIh-Zq-irU"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4WN-tZ-xrE" firstAttribute="top" secondItem="FEK-xn-JXo" secondAttribute="bottom" constant="8" symbolic="YES" id="Pc9-Nt-Jfz"/>
+                            <constraint firstItem="4WN-tZ-xrE" firstAttribute="leading" secondItem="AVJ-v2-HIl" secondAttribute="leadingMargin" constant="-12" id="TVL-ct-zrt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sN9-p3-S1O"/>
+                    <connections>
+                        <outlet property="userImage" destination="RvO-B6-LCf" id="wcG-2S-vwE"/>
+                        <outlet property="userPosts" destination="j0y-8p-pse" id="Kuz-N0-w3W"/>
+                        <outlet property="usernameLabel" destination="J1V-0Q-IAe" id="YPC-Nq-vDa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3Y-A5-3hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
