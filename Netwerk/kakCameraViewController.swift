@@ -87,8 +87,6 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
             // Anything you want to happen when the user selects cancel
         })
     }
-
-
     
 
     /*

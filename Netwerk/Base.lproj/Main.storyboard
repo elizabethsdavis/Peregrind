@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tzW-3Z-dmJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SUl-Q9-5dR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Peregrind Login View Controller-->
+        <scene sceneID="3g9-zs-OQT">
+            <objects>
+                <viewController storyboardIdentifier="Peregrind Login View Controller" id="SUl-Q9-5dR" customClass="PeregrindLoginViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2CJ-VB-BJr"/>
+                        <viewControllerLayoutGuide type="bottom" id="JLh-wm-OA8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W9E-Tt-CmB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="UGB-16-tGm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UGB-16-tGm" firstAttribute="leading" secondItem="W9E-Tt-CmB" secondAttribute="leading" id="10t-Z3-Rca"/>
+                            <constraint firstItem="UGB-16-tGm" firstAttribute="top" secondItem="W9E-Tt-CmB" secondAttribute="top" id="3CD-MM-uhT"/>
+                            <constraint firstAttribute="trailing" secondItem="UGB-16-tGm" secondAttribute="trailing" id="8dG-I6-kj8"/>
+                            <constraint firstItem="UGB-16-tGm" firstAttribute="bottom" secondItem="JLh-wm-OA8" secondAttribute="top" id="Ler-7A-Lem"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="Progress After Login" id="aKS-3N-CkF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZ0-sM-N8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1246" y="683"/>
+        </scene>
         <!--Kak Login View Controller-->
         <scene sceneID="SiL-Sa-f5f">
             <objects>
@@ -21,13 +53,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash Screen" translatesAutoresizingMaskIntoConstraints="NO" id="EBV-F0-Df1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-W1-WcM">
-                                <rect key="frame" x="205" y="55" width="119" height="30"/>
-                                <state key="normal" title="Go to normal app"/>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="eaV-Be-7PM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-xq-aAO" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="221" y="446" width="158" height="30"/>
                                 <state key="normal" title="Facebook Login Button"/>
@@ -60,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7T-pQ-Kef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1185" y="353"/>
+            <point key="canvasLocation" x="-986" y="-22"/>
         </scene>
         <!--Main View-->
         <scene sceneID="yl2-sM-qoP">
@@ -510,6 +535,6 @@
         <image name="User Icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hTD-v6-q0y"/>
+        <segue reference="aKS-3N-CkF"/>
     </inferredMetricsTieBreakers>
 </document>

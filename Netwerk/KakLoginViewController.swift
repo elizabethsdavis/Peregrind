@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
+//import FBSDKCoreKit
+//import FBSDKLoginKit
 
 class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -40,9 +40,6 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     // Facebook Delegate Methods
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        
-        
-        print("User Logged In")
         
         if ((error) != nil)
         {

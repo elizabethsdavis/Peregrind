@@ -141,26 +141,6 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
-//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        return 300.0
-//    }
-    
-//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//
-//        cell.contentView.backgroundColor = UIColor.whiteColor()
-//        
-//        let whiteRoundedView : UIView = UIView(frame: CGRectMake(0, 5, self.view.frame.size.width, self.view.frame.size.height))
-//    
-//        whiteRoundedView.layer.backgroundColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0])
-//        whiteRoundedView.layer.masksToBounds = false
-//        whiteRoundedView.layer.cornerRadius = 2.0
-//        whiteRoundedView.layer.shadowOffset = CGSizeMake(0, 1)
-//        whiteRoundedView.layer.shadowOpacity = 0.2
-//        
-//        cell.contentView.addSubview(whiteRoundedView)
-//        cell.contentView.sendSubviewToBack(whiteRoundedView)
-//    }
    
 
     /*

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,21 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("oNWlowHHo7G4KbhnA4zyDjygMZ38avt3zBFBfUni", clientKey: "mxkEtd1rMq94xG1URi0J9qQeHdHB8QTrGLnXf81e")
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
-        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        var initialViewController: UIViewController
-        
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Peregrind Tab Bar Controller") as! PeregrindTabBarController
-            initialViewController = vc
-            
-        } else {
-            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Login View Controller")
-        }
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions);
+//        return true
+//        
+//        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        var initialViewController: UIViewController
+//        
+//        if (FBSDKAccessToken.currentAccessToken() != nil) {
+//            let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Peregrind Tab Bar Controller") as! PeregrindTabBarController
+//            initialViewController = vc
+//            
+//        } else {
+//            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Peregrind Login View Controller")
+//        }
+//        
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         
         return true
     }

@@ -15,22 +15,12 @@
 		1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */; };
 		1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0DD1CD0A0340037DCFA /* Kak.swift */; };
 		1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */; };
-		1B5EA62D1CDB0F0D000C69AF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5EA62C1CDB0F0D000C69AF /* FBSDKCoreKit.framework */; };
-		1B5EA62F1CDB0F1A000C69AF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5EA62E1CDB0F1A000C69AF /* FBSDKLoginKit.framework */; };
 		1B5EA6311CDB0F28000C69AF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5EA6301CDB0F28000C69AF /* FBSDKShareKit.framework */; };
 		1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA6321CDB17C9000C69AF /* KakLoginViewController.swift */; };
+		1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */; };
+		1B5EA6391CDB4F5D000C69AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA6381CDB4F5D000C69AF /* Podfile */; };
 		449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134211CD9C6B200E4154B /* ProfileViewController.swift */; };
 		449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134231CDA8C7100E4154B /* ProfileViewCell.swift */; };
-		B918401C1CD1CBF700014BB9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840171CD1CBF700014BB9 /* Bolts.framework */; };
-		B918401D1CD1CBF700014BB9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840181CD1CBF700014BB9 /* Parse.framework */; };
-		B91840201CD1CBF700014BB9 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918401B1CD1CBF700014BB9 /* ParseUI.framework */; };
-		B91840261CD1D47700014BB9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840251CD1D47700014BB9 /* libsqlite3.0.tbd */; };
-		B91840281CD1D48200014BB9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840271CD1D48200014BB9 /* AudioToolbox.framework */; };
-		B918402A1CD1D4FB00014BB9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840291CD1D4FB00014BB9 /* CFNetwork.framework */; };
-		B918402E1CD1D53A00014BB9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918402D1CD1D53A00014BB9 /* QuartzCore.framework */; };
-		B91840301CD1D54200014BB9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918402F1CD1D54200014BB9 /* Security.framework */; };
-		B91840321CD1D54C00014BB9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */; };
-		B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840331CD1D55500014BB9 /* libz.tbd */; };
 		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
 		B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,24 +36,15 @@
 		1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakTableViewCell.swift; sourceTree = "<group>"; };
 		1B26A0DD1CD0A0340037DCFA /* Kak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kak.swift; sourceTree = "<group>"; };
 		1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kakCameraViewController.swift; sourceTree = "<group>"; };
-		1B5EA62C1CDB0F0D000C69AF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		1B5EA62E1CDB0F1A000C69AF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1B5EA6301CDB0F28000C69AF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		1B5EA6321CDB17C9000C69AF /* KakLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakLoginViewController.swift; sourceTree = "<group>"; };
+		1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeregrindLoginViewController.swift; path = ../PeregrindLoginViewController.swift; sourceTree = "<group>"; };
+		1B5EA6381CDB4F5D000C69AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		204270503153AE27830000B6 /* Pods-Netwerk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.release.xcconfig"; sourceTree = "<group>"; };
 		449134211CD9C6B200E4154B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		449134231CDA8C7100E4154B /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
-		B91840171CD1CBF700014BB9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		B91840181CD1CBF700014BB9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		B918401B1CD1CBF700014BB9 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		4DE3B34DC6B68801D91A7D3F /* Pods-Netwerk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.debug.xcconfig"; sourceTree = "<group>"; };
 		B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Netwerk-Bridging-Header.h"; sourceTree = "<group>"; };
-		B91840251CD1D47700014BB9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		B91840271CD1D48200014BB9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		B91840291CD1D4FB00014BB9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		B918402B1CD1D50D00014BB9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		B918402D1CD1D53A00014BB9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B918402F1CD1D54200014BB9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B91840331CD1D55500014BB9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeregrindTabBarController.swift; sourceTree = "<group>"; };
 		B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostNewKakViewController.swift; path = ../PostNewKakViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,19 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91840341CD1D55500014BB9 /* libz.tbd in Frameworks */,
-				B91840321CD1D54C00014BB9 /* SystemConfiguration.framework in Frameworks */,
-				1B5EA62F1CDB0F1A000C69AF /* FBSDKLoginKit.framework in Frameworks */,
-				B91840301CD1D54200014BB9 /* Security.framework in Frameworks */,
 				1B5EA6311CDB0F28000C69AF /* FBSDKShareKit.framework in Frameworks */,
-				1B5EA62D1CDB0F0D000C69AF /* FBSDKCoreKit.framework in Frameworks */,
-				B918402E1CD1D53A00014BB9 /* QuartzCore.framework in Frameworks */,
-				B918402A1CD1D4FB00014BB9 /* CFNetwork.framework in Frameworks */,
-				B91840281CD1D48200014BB9 /* AudioToolbox.framework in Frameworks */,
-				B91840261CD1D47700014BB9 /* libsqlite3.0.tbd in Frameworks */,
-				B918401D1CD1CBF700014BB9 /* Parse.framework in Frameworks */,
-				B918401C1CD1CBF700014BB9 /* Bolts.framework in Frameworks */,
-				B91840201CD1CBF700014BB9 /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +64,11 @@
 		1B26A0711CCC487B0037DCFA = {
 			isa = PBXGroup;
 			children = (
+				1B5EA6381CDB4F5D000C69AF /* Podfile */,
 				1B26A07C1CCC487C0037DCFA /* Netwerk */,
 				1B26A07B1CCC487B0037DCFA /* Products */,
 				B91840211CD1CBFC00014BB9 /* Frameworks */,
+				4679B0CFFD5FBAC05F9DA005 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +83,7 @@
 		1B26A07C1CCC487C0037DCFA /* Netwerk */ = {
 			isa = PBXGroup;
 			children = (
+				1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */,
 				B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */,
 				1B26A07D1CCC487C0037DCFA /* AppDelegate.swift */,
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
@@ -131,23 +103,19 @@
 			path = Netwerk;
 			sourceTree = "<group>";
 		};
+		4679B0CFFD5FBAC05F9DA005 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DE3B34DC6B68801D91A7D3F /* Pods-Netwerk.debug.xcconfig */,
+				204270503153AE27830000B6 /* Pods-Netwerk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B91840211CD1CBFC00014BB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1B5EA6301CDB0F28000C69AF /* FBSDKShareKit.framework */,
-				1B5EA62E1CDB0F1A000C69AF /* FBSDKLoginKit.framework */,
-				1B5EA62C1CDB0F0D000C69AF /* FBSDKCoreKit.framework */,
-				B91840331CD1D55500014BB9 /* libz.tbd */,
-				B91840311CD1D54C00014BB9 /* SystemConfiguration.framework */,
-				B918402F1CD1D54200014BB9 /* Security.framework */,
-				B918402D1CD1D53A00014BB9 /* QuartzCore.framework */,
-				B918402B1CD1D50D00014BB9 /* CoreLocation.framework */,
-				B91840291CD1D4FB00014BB9 /* CFNetwork.framework */,
-				B91840271CD1D48200014BB9 /* AudioToolbox.framework */,
-				B91840251CD1D47700014BB9 /* libsqlite3.0.tbd */,
-				B91840171CD1CBF700014BB9 /* Bolts.framework */,
-				B91840181CD1CBF700014BB9 /* Parse.framework */,
-				B918401B1CD1CBF700014BB9 /* ParseUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B26A08E1CCC487C0037DCFA /* Build configuration list for PBXNativeTarget "Netwerk" */;
 			buildPhases = (
+				0D34C6E5972C356F45E50895 /* Check Pods Manifest.lock */,
 				1B26A0761CCC487B0037DCFA /* Sources */,
 				1B26A0771CCC487B0037DCFA /* Frameworks */,
 				1B26A0781CCC487B0037DCFA /* Resources */,
+				A6035C3659107EABC2FAA575 /* Embed Pods Frameworks */,
+				65FABB900273CF0D20C038F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,17 +184,67 @@
 			files = (
 				1B26A08A1CCC487C0037DCFA /* LaunchScreen.storyboard in Resources */,
 				1B26A0871CCC487C0037DCFA /* Assets.xcassets in Resources */,
+				1B5EA6391CDB4F5D000C69AF /* Podfile in Resources */,
 				1B26A0851CCC487C0037DCFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D34C6E5972C356F45E50895 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65FABB900273CF0D20C038F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6035C3659107EABC2FAA575 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B26A0761CCC487B0037DCFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */,
 				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
@@ -263,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -309,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -346,6 +369,7 @@
 		};
 		1B26A08F1CCC487C0037DCFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE3B34DC6B68801D91A7D3F /* Pods-Netwerk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -366,6 +390,7 @@
 		};
 		1B26A0901CCC487C0037DCFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204270503153AE27830000B6 /* Pods-Netwerk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
