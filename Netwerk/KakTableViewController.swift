@@ -30,13 +30,11 @@ class KakTableViewController: UITableViewController, UITextFieldDelegate {
     var posts: NSArray = [
         
          ["user": "Elizabeth Davis", "text": "Got the light patterns working :)", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url": "https://goo.gl/MTGtp1"],
-        
-//
-        
+    
         ["user": "Juliana Cook", "text": "Finally finished with Xylo!", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent.xx.fbcdn.net/v/t1.0-9/12321288_10153274616332215_1359127258490569704_n.jpg?oh=1a384987e0149b70a84900953f163429&oe=579CFDB1", "video_url":"https://goo.gl/KfKt6R"],
-//        
+       
          ["user": "Josh Moss", "text": "The probability struggle is real :(", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://media.licdn.com/media/p/5/000/230/1d2/17e88ce.jpg", "video_url":"https://goo.gl/UM5XcE"],
-//
+
         ["user": "Juliana Cook", "text": "so close", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent.xx.fbcdn.net/v/t1.0-9/12321288_10153274616332215_1359127258490569704_n.jpg?oh=1a384987e0149b70a84900953f163429&oe=579CFDB1", "video_url":"https://goo.gl/660Kug"],
         
         ["user": "Elizabeth Davis", "text": "Making an LED rainbow!", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQr_5A8C1iAFPGDVMbgK_SEOffDmlWEN6PtDCtsdt1Ea2AYNmUg"],

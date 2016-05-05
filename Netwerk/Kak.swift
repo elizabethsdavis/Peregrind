@@ -41,7 +41,6 @@ public class Kak: NSObject {
  
     }
     
-    
     struct KakKey {
         static let User = "user"
         static let Text = "text"
@@ -50,5 +49,4 @@ public class Kak: NSObject {
         static let ImageURL = "image_url"
         static let VideoURL = "video_url"
     }
-
 }

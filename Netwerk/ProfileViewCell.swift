@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ProfileViewCell: UITableViewCell, UIWebViewDelegate {
+class ProfileViewCell: UITableViewCell {
 
 
     @IBOutlet weak var kakPostLabel: UILabel!
     
-    @IBOutlet weak var kakWebView: UIWebView!
+   
+    
+    @IBOutlet weak var kakImageView: UIImageView!
     
     var kak: Kak? {
         didSet {
@@ -25,23 +27,22 @@ class ProfileViewCell: UITableViewCell, UIWebViewDelegate {
         kakPostLabel?.attributedText = nil
         
         if let kak = self.kak {
+            downloadImage(kak.videoURL, toImageView: kakImageView)
             kakPostLabel.text = kak.text
-            // TODO: change to am image view
-            let videoURLRequest : NSURLRequest = NSURLRequest(URL: kak.videoURL)
-            kakWebView.delegate = self
-            kakWebView.loadRequest(videoURLRequest)
         }
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        // TODO: make this better
-        let contentSize = webView.scrollView.contentSize
-        let viewSize = webView.bounds.size
-        
-        let rw = viewSize.width / contentSize.width
-        
-        webView.scrollView.minimumZoomScale = rw
-        webView.scrollView.maximumZoomScale = rw
-        webView.scrollView.zoomScale = rw
+    private func downloadImage(url: NSURL, toImageView imageView: UIImageView){
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                imageView.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    private func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error) }.resume()
     }
 }

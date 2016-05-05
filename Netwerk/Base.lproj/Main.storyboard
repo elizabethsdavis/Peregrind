@@ -128,20 +128,20 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Kak" rowHeight="293" id="Y8a-AE-Ipn" customClass="KakTableViewCell" customModule="Netwerk" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="293"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="292"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
-                                            <rect key="frame" x="16" y="18" width="584" height="273"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
+                                            <rect key="frame" x="16" y="18" width="584" height="268"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54v-m1-yAU">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54v-m1-yAU">
                                                     <rect key="frame" x="0.0" y="0.0" width="584" height="60"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-0Q-y1Q">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-0Q-y1Q">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-Xg-awv">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-Xg-awv">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="4iu-Sq-3GJ"/>
@@ -156,16 +156,16 @@
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Z6-cr9">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Z6-cr9">
                                                             <rect key="frame" x="69" y="0.0" width="515" height="60"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" ambiguous="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="515" height="24"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                                     <color key="textColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kak Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-lK-RY6">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kak Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-lK-RY6">
                                                                     <rect key="frame" x="0.0" y="24" width="515" height="36"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,10 +175,12 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dA9-wi-Szy">
-                                                    <rect key="frame" x="0.0" y="70" width="584" height="203"/>
-                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                                </webView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh">
+                                                    <rect key="frame" x="0.0" y="70" width="584" height="198"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="198" id="HiH-CY-T9b"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </stackView>
@@ -199,10 +201,10 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="kakImageView" destination="ldu-Aw-xKh" id="IGc-gK-jhY"/>
                                     <outlet property="kakPostLabel" destination="tIT-lK-RY6" id="bDZ-MA-y4t"/>
                                     <outlet property="kakProfileImageView" destination="3bU-Xg-awv" id="Vdt-Nb-HYp"/>
                                     <outlet property="kakScreenNameLabel" destination="8uK-ku-tyM" id="pn5-R6-Bzc"/>
-                                    <outlet property="kakWebView" destination="dA9-wi-Szy" id="bAO-08-CzA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -328,37 +330,61 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="584" height="292"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-Xh-bnb">
-                                                            <rect key="frame" x="4" y="8" width="580" height="285"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-Xh-bnb">
+                                                            <rect key="frame" x="4" y="8" width="584" height="292"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kak Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-fS-Z4a">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="580" height="20"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kak Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-fS-Z4a">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="40"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bND-AA-v9n">
-                                                                    <rect key="frame" x="0.0" y="30" width="580" height="255"/>
-                                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                                                </webView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tts-aV-iXJ">
+                                                                    <rect key="frame" x="0.0" y="55" width="584" height="237"/>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="580" id="SEN-sI-9sZ"/>
                                                             </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="SEN-sI-9sZ"/>
+                                                                </mask>
+                                                            </variation>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="height" secondItem="n1t-5M-724" secondAttribute="height" id="0Tz-ed-CPp"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="centerY" secondItem="n1t-5M-724" secondAttribute="centerY" id="0bG-zJ-65Z"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="width" secondItem="n1t-5M-724" secondAttribute="width" id="9TP-9b-Odb"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="centerY" secondItem="n1t-5M-724" secondAttribute="centerY" id="A6U-9o-Yd8"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="width" secondItem="n1t-5M-724" secondAttribute="width" id="Lbf-fd-kAL"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="centerX" secondItem="n1t-5M-724" secondAttribute="centerX" id="VLf-fC-27e"/>
                                                         <constraint firstItem="5jg-Xh-bnb" firstAttribute="top" secondItem="n1t-5M-724" secondAttribute="topMargin" constant="-2" id="m8O-qE-aIA"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="height" secondItem="n1t-5M-724" secondAttribute="height" id="mqd-pE-3bJ"/>
+                                                        <constraint firstItem="5jg-Xh-bnb" firstAttribute="centerX" secondItem="n1t-5M-724" secondAttribute="centerX" id="qBz-4r-9xq"/>
                                                         <constraint firstAttribute="trailing" secondItem="5jg-Xh-bnb" secondAttribute="trailing" id="xGf-kB-Pka"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="5jg-Xh-bnb" secondAttribute="bottom" constant="-10" id="xLW-Vc-x5o"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="A6U-9o-Yd8"/>
+                                                            <exclude reference="Lbf-fd-kAL"/>
+                                                            <exclude reference="m8O-qE-aIA"/>
+                                                            <exclude reference="mqd-pE-3bJ"/>
+                                                            <exclude reference="qBz-4r-9xq"/>
+                                                            <exclude reference="xGf-kB-Pka"/>
+                                                            <exclude reference="xLW-Vc-x5o"/>
+                                                        </mask>
+                                                    </variation>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
+                                                    <outlet property="kakImageView" destination="Tts-aV-iXJ" id="dmA-yl-AUh"/>
                                                     <outlet property="kakPostLabel" destination="uYS-fS-Z4a" id="reN-oe-Te1"/>
-                                                    <outlet property="kakWebView" destination="bND-AA-v9n" id="dFA-zn-6hW"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

@@ -8,18 +8,16 @@
 
 import UIKit
 
-class KakTableViewCell: UITableViewCell, UIWebViewDelegate {
+class KakTableViewCell: UITableViewCell {
 
 
     @IBOutlet weak var kakScreenNameLabel: UILabel!
 
     @IBOutlet weak var kakPostLabel: UILabel!
     
-    @IBOutlet weak var kakWebView: UIWebView!
-    
     @IBOutlet weak var kakProfileImageView: UIImageView!
     
-    
+    @IBOutlet weak var kakImageView: UIImageView!
     
     var kak: Kak? {
         didSet {
@@ -39,23 +37,8 @@ class KakTableViewCell: UITableViewCell, UIWebViewDelegate {
                           toImageView: kakProfileImageView)
             setProfileImageView(kakProfileImageView)
             
-            // TODO: change to am image view
-            let videoURLRequest : NSURLRequest = NSURLRequest(URL: kak.videoURL)
-            kakWebView.delegate = self
-            kakWebView.loadRequest(videoURLRequest)
+            downloadImage(kak.videoURL, toImageView: kakImageView)
         }
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        // TODO: make this better
-        let contentSize = webView.scrollView.contentSize
-        let viewSize = webView.bounds.size
-        
-        let rw = viewSize.width / contentSize.width
-        
-        webView.scrollView.minimumZoomScale = rw
-        webView.scrollView.maximumZoomScale = rw
-        webView.scrollView.zoomScale = rw
     }
     
     private func setProfileImageView(imageView: UIImageView) {

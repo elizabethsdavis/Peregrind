@@ -21,6 +21,7 @@
 		1B5EA6391CDB4F5D000C69AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA6381CDB4F5D000C69AF /* Podfile */; };
 		449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134211CD9C6B200E4154B /* ProfileViewController.swift */; };
 		449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134231CDA8C7100E4154B /* ProfileViewCell.swift */; };
+		965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */; };
 		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
 		B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		1B5EA6321CDB17C9000C69AF /* KakLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakLoginViewController.swift; sourceTree = "<group>"; };
 		1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeregrindLoginViewController.swift; path = ../PeregrindLoginViewController.swift; sourceTree = "<group>"; };
 		1B5EA6381CDB4F5D000C69AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Netwerk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		204270503153AE27830000B6 /* Pods-Netwerk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.release.xcconfig"; sourceTree = "<group>"; };
 		449134211CD9C6B200E4154B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		449134231CDA8C7100E4154B /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B5EA6311CDB0F28000C69AF /* FBSDKShareKit.framework in Frameworks */,
+				965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +87,13 @@
 			isa = PBXGroup;
 			children = (
 				1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */,
-				B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */,
 				1B26A07D1CCC487C0037DCFA /* AppDelegate.swift */,
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
 				1B5EA6321CDB17C9000C69AF /* KakLoginViewController.swift */,
 				B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */,
-				1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */,
-				1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */,
-				449134231CDA8C7100E4154B /* ProfileViewCell.swift */,
-				449134211CD9C6B200E4154B /* ProfileViewController.swift */,
-				1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */,
+				1B5EA63E1CDB6BA5000C69AF /* Newsfeed */,
+				1B5EA63D1CDB6B92000C69AF /* Profile */,
+				1B5EA63F1CDB6BB5000C69AF /* Create Posts */,
 				1B26A0DD1CD0A0340037DCFA /* Kak.swift */,
 				1B26A0861CCC487C0037DCFA /* Assets.xcassets */,
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
@@ -101,6 +101,33 @@
 				B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */,
 			);
 			path = Netwerk;
+			sourceTree = "<group>";
+		};
+		1B5EA63D1CDB6B92000C69AF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				449134231CDA8C7100E4154B /* ProfileViewCell.swift */,
+				449134211CD9C6B200E4154B /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		1B5EA63E1CDB6BA5000C69AF /* Newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */,
+				1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */,
+			);
+			name = Newsfeed;
+			sourceTree = "<group>";
+		};
+		1B5EA63F1CDB6BB5000C69AF /* Create Posts */ = {
+			isa = PBXGroup;
+			children = (
+				B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */,
+				1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */,
+			);
+			name = "Create Posts";
 			sourceTree = "<group>";
 		};
 		4679B0CFFD5FBAC05F9DA005 /* Pods */ = {
@@ -116,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5EA6301CDB0F28000C69AF /* FBSDKShareKit.framework */,
+				203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
