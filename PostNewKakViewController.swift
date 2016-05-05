@@ -13,6 +13,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var kakImage: UIImageView!
     @IBOutlet weak var kakCaption: UITextView!
     @IBOutlet weak var kakButton: UIButton!
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
 
     override func viewDidLoad() {
@@ -67,6 +68,46 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func tappedShare(sender: UIButton) {
         print("tapped share button")
+        
+        // TODO: add loading spinner
+        
+        
+        let pictureData = UIImageJPEGRepresentation(kakImage.image!, 0.8)
+        
+        let file = PFFile(name: "image", data: pictureData!)
+        file!.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+            if succeeded {
+                // TODO: only exit on save if have error
+                print("upload succeeded!")
+                self.saveKak(file!);
+            } else {
+                // TODO: show error view
+                print("upload failed")
+            }
+            }, progressBlock: { percent in
+                print("Uploaded photo: \(percent)%")
+        })
+        
+    }
+    
+    
+    func saveKak(file: PFFile) {
+        let wallPost = WallPost(image: file, user: PFUser.currentUser()!, comment: self.kakCaption.text)
+        wallPost.saveInBackgroundWithBlock{ succeeded, error in
+            if succeeded {
+                // TODO: wait until photo has uploaded to move on, showing loading bar
+                print("successfully saved kak")
+                self.exitPostKakView()
+            } else {
+                if ((error?.userInfo["error"]) != nil) {
+                    // TODO: show error
+                    print("error saving kak")
+                }
+            }
+        }
+    }
+    
+    func exitPostKakView() {
         // dismiss current view controller
         let presentingViewController: UIViewController! = self.presentingViewController
         
@@ -79,7 +120,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         self.dismissViewControllerAnimated(false) {
             presentingViewController.dismissViewControllerAnimated(false, completion: nil)
         }
-        
     }
     
     override func didReceiveMemoryWarning() {

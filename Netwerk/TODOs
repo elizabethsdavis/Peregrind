@@ -19,6 +19,9 @@ DONE fix cancel button in upload image flow
 - only allow the app to work in portrait (or fix views to work in landscape)
 
 nice to haves:
+- loading spinner on upload
+- loading spinner on wall pictures (use Parse tutorial)
+
 - profile page
 - like/comments
 

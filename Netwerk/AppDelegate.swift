@@ -24,6 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: change to one above once have pulling from server working
         Parse.setApplicationId("fiKid2BWAYs20Ry1f2zP05XKxmW1vGKIWJMXFJn3", clientKey: "mGitwGHnym3bAdyJavZvCd6Pbw9JRLAOGXEWSz1K")
         
+        // log in as meredith
+        PFUser.logInWithUsernameInBackground("Meredith", password: "bananarama") { user, error in
+            if user != nil {
+//                self.performSegueWithIdentifier(self.tableViewWallSegue, sender: nil)
+                print("logged in as Meredith")
+            } else if let error = error {
+//                self.showErrorView(error)
+                print("error logging in")
+            }
+        }
+        
         // Override point for customization after application launch.
         return true
     }
