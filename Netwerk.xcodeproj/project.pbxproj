@@ -15,6 +15,8 @@
 		1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */; };
 		1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0DD1CD0A0340037DCFA /* Kak.swift */; };
 		1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */; };
+		449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134211CD9C6B200E4154B /* ProfileViewController.swift */; };
+		449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134231CDA8C7100E4154B /* ProfileViewCell.swift */; };
 		B918401C1CD1CBF700014BB9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840171CD1CBF700014BB9 /* Bolts.framework */; };
 		B918401D1CD1CBF700014BB9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91840181CD1CBF700014BB9 /* Parse.framework */; };
 		B91840201CD1CBF700014BB9 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B918401B1CD1CBF700014BB9 /* ParseUI.framework */; };
@@ -40,6 +42,8 @@
 		1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakTableViewCell.swift; sourceTree = "<group>"; };
 		1B26A0DD1CD0A0340037DCFA /* Kak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kak.swift; sourceTree = "<group>"; };
 		1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kakCameraViewController.swift; sourceTree = "<group>"; };
+		449134211CD9C6B200E4154B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		449134231CDA8C7100E4154B /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		B91840171CD1CBF700014BB9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B91840181CD1CBF700014BB9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B918401B1CD1CBF700014BB9 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */,
 				1B26A0B61CD03E1C0037DCFA /* KakTableViewCell.swift */,
 				1B26A0B21CCEE9450037DCFA /* KakTableViewController.swift */,
+				449134231CDA8C7100E4154B /* ProfileViewCell.swift */,
+				449134211CD9C6B200E4154B /* ProfileViewController.swift */,
 				1B26A0E11CD1886A0037DCFA /* kakCameraViewController.swift */,
 				1B26A0DD1CD0A0340037DCFA /* Kak.swift */,
 				1B26A0861CCC487C0037DCFA /* Assets.xcassets */,
@@ -203,12 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
 				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
+				449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */,
 				1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
