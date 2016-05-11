@@ -14,7 +14,7 @@ public class Kak: NSObject {
     public var user: String
     public var created: String
     public let id: String
-    public let imageURL: NSURL
+    public var imageURL: NSURL
     public let videoURL: NSURL
     public let image: PFFile?
     

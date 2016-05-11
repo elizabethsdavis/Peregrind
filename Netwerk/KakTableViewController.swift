@@ -85,7 +85,9 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         kakCell.kakPostLabel.numberOfLines = 0;
         kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
         kakCell.kakPostLabel.sizeToFit();
-        
+
+        kak.imageURL = NSURL(string: kakPost.user.objectForKey("faceBookProfilePicURL") as! String)!
+        kak.user = kakPost.user.objectForKey("fullName") as! String
         
         kakCell.kakImageView.loadInBackground(nil) { percent in
             print("\(percent)% image loaded")

@@ -5,6 +5,7 @@
 //  Created by Elizabeth Davis on 5/4/16.
 //  Copyright © 2016 Elizabeth Davis. All rights reserved.
 //
+// NOTE: THIS CLASS IS NOT USED
 
 import UIKit
 
@@ -17,14 +18,14 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         super.viewDidLoad()
         
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            self.fetchUserInforFromFacebook() // TODO: remove
-            performSegueWithIdentifier("Proceed After Login", sender: self)
-        } else {
-            self.view.addSubview(loginButton)
-            loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-            loginButton.delegate = self
-        }
+//        if (FBSDKAccessToken.currentAccessToken() != nil) {
+//            self.fetchUserInforFromFacebook() // TODO: remove
+//            performSegueWithIdentifier("Proceed After Login", sender: self)
+//        } else {
+//            self.view.addSubview(loginButton)
+//            loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+//            loginButton.delegate = self
+//        }
     }
     
     var FBSDKLoginSuccess = false

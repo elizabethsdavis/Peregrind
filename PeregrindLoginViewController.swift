@@ -23,9 +23,11 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
             loginViewController.delegate = self
             loginViewController.fields = .Facebook
             loginViewController.emailAsUsername = true
-            self.presentViewController(loginViewController, animated: false, completion: nil)
+            self.presentViewController(loginViewController, animated: false, completion: { self.fetchUserInfoFromFacebook() })
         } else {
-            presentLoggedInAlert()
+            //presentLoggedInAlert()
+            self.dismissViewControllerAnimated(true, completion: nil)
+            self.performSegueWithIdentifier("Progress After Login", sender: self)
         }
     }
     
@@ -43,6 +45,37 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
         self.dismissViewControllerAnimated(true, completion: nil)
         presentLoggedInAlert()
     }
+    
+    // from http://stackoverflow.com/questions/30252844/how-to-get-the-username-from-facebook-in-swift
+    func fetchUserInfoFromFacebook(){
+        if ((FBSDKAccessToken.currentAccessToken()) != nil){
+            
+            let request = FBSDKGraphRequest(graphPath:"me", parameters:nil)
+            request.startWithCompletionHandler({connection, result, error in
+                if error == nil {
+                    
+                    //FACEBOOK DATA IN DICTIONARY
+                    let userData = result as! NSDictionary
+                    let userName = userData.objectForKey("name") as! String
+                    let userId = userData.objectForKey(("id")) as! String
+                    let userProfileImageURL = "https://graph.facebook.com/\(userId)/picture?width=100&height=100"
+                    
+                    
+                    let currentUser : PFUser = PFUser.currentUser()!
+                    currentUser.setObject(userId, forKey: "faceBookID")
+                    currentUser.setObject(userName, forKey: "fullName")
+                    currentUser.setObject(userProfileImageURL, forKey: "faceBookProfilePicURL")
+                    currentUser.saveInBackground()
+                    
+                }else{
+                    print("Error getting facebook data")
+                    //                    self.showErrorMessage(error)
+                    //                    withcompletionHandler(success: false)
+                }
+            })
+        }
+    }
+
     
 
     /*
