@@ -82,7 +82,8 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         let kak = kaks[0]
         kakCell.kakImageView.file = kakPost.image
         kak.text = kakPost.comment!
-        
+        kak.imageURL = NSURL(string: kakPost.user.objectForKey("faceBookProfilePicURL") as! String)!
+        kak.user = kakPost.user.objectForKey("fullName") as! String
         
         kakCell.kakImageView.loadInBackground(nil) { percent in
             print("\(percent)% image loaded")

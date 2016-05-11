@@ -25,8 +25,9 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
             loginViewController.emailAsUsername = true
             self.presentViewController(loginViewController, animated: false, completion: { self.fetchUserInfoFromFacebook() })
         } else {
-            self.fetchUserInfoFromFacebook() // TODO: remove and put only in login flow
-            presentLoggedInAlert()
+            //presentLoggedInAlert()
+            self.dismissViewControllerAnimated(true, completion: nil)
+            self.performSegueWithIdentifier("Progress After Login", sender: self)
         }
     }
     
