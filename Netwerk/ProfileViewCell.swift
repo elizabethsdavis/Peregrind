@@ -10,10 +10,8 @@ import UIKit
 
 class ProfileViewCell: UITableViewCell {
 
-
-    @IBOutlet weak var kakPostLabel: UILabel!
     
-   
+    @IBOutlet weak var kakPostLabel: UILabel!
     
     @IBOutlet weak var kakImageView: UIImageView!
     

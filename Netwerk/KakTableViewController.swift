@@ -82,6 +82,9 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         let kak = kaks[0]
         kakCell.kakImageView.file = kakPost.image
         kak.text = kakPost.comment!
+        kakCell.kakPostLabel.numberOfLines = 0;
+        kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
+        kakCell.kakPostLabel.sizeToFit();
         
         
         kakCell.kakImageView.loadInBackground(nil) { percent in

@@ -30,7 +30,7 @@ class KakTableViewCell: PFTableViewCell {
         kakScreenNameLabel?.text = nil
         
         if let kak = self.kak {
-            kakPostLabel.text = kak.text
+            kakPostLabel.text = kak.text;
             
             kakScreenNameLabel?.text = kak.user
             downloadImage(kak.imageURL,
