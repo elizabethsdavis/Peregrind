@@ -13,12 +13,13 @@ class KakTableViewCell: PFTableViewCell {
 
     @IBOutlet weak var kakScreenNameLabel: UILabel!
 
-    @IBOutlet weak var kakPostLabel: UILabel!
+    //@IBOutlet weak var kakPostLabel: UILabel!
     
     @IBOutlet weak var kakProfileImageView: UIImageView!
     
     @IBOutlet weak var kakImageView: PFImageView!
     
+    @IBOutlet weak var kakPostLabel: UILabel!
     var kak: Kak? {
         didSet {
             updateUI();

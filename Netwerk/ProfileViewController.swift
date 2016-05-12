@@ -47,7 +47,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadKaks()
@@ -119,9 +118,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if let kakCell = cell as? ProfileViewCell {
             kakCell.kak = kak;
-            kakCell.kakPostLabel.numberOfLines = 0;
-            kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
-            kakCell.kakPostLabel.sizeToFit();
+//            kakCell.kakPostLabel.numberOfLines = 0;
+//            kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
+//            kakCell.kakPostLabel.sizeToFit();
         }
         
         return cell

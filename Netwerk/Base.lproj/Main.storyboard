@@ -138,16 +138,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
-                                            <rect key="frame" x="16" y="18" width="584" height="370"/>
+                                            <rect key="frame" x="16" y="18" width="584" height="379"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54v-m1-yAU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="60"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54v-m1-yAU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="69"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-0Q-y1Q">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-0Q-y1Q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="69"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-Xg-awv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-Xg-awv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="69"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="4iu-Sq-3GJ"/>
                                                                         <constraint firstAttribute="width" constant="60" id="GNp-uI-MAg"/>
@@ -161,8 +161,8 @@
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Z6-cr9">
-                                                            <rect key="frame" x="69" y="0.0" width="515" height="60"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Z6-cr9">
+                                                            <rect key="frame" x="69" y="0.0" width="515" height="69"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="515" height="22"/>
@@ -170,10 +170,14 @@
                                                                     <color key="textColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kak Post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-lK-RY6">
-                                                                    <rect key="frame" x="0.0" y="22" width="515" height="38"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kaking away..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0y-nm-2SW" userLabel="Kak Post Label">
+                                                                    <rect key="frame" x="0.0" y="22" width="515" height="47"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="26p-gd-cYr"/>
+                                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="vht-sj-ZRD"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" red="0.46772411619999998" green="0.46772411619999998" blue="0.46772411619999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -183,8 +187,8 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="85F-7Y-h0I"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="70" width="584" height="300"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="79" width="584" height="300"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="300" id="HiH-CY-T9b"/>
                                                         <constraint firstAttribute="width" secondItem="ldu-Aw-xKh" secondAttribute="height" multiplier="292:99" id="yng-Ak-oS6"/>
@@ -216,7 +220,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="kakImageView" destination="ldu-Aw-xKh" id="IGc-gK-jhY"/>
-                                    <outlet property="kakPostLabel" destination="tIT-lK-RY6" id="bDZ-MA-y4t"/>
+                                    <outlet property="kakPostLabel" destination="s0y-nm-2SW" id="PuM-Gl-vMY"/>
                                     <outlet property="kakProfileImageView" destination="3bU-Xg-awv" id="Vdt-Nb-HYp"/>
                                     <outlet property="kakScreenNameLabel" destination="8uK-ku-tyM" id="pn5-R6-Bzc"/>
                                 </connections>
