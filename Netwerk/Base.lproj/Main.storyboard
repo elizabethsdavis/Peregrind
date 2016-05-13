@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SUl-Q9-5dR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SUl-Q9-5dR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -134,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="399.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
@@ -164,14 +164,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Z6-cr9">
                                                             <rect key="frame" x="69" y="0.0" width="515" height="69"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="515" height="22"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                                     <color key="textColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kaking away..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0y-nm-2SW" userLabel="Kak Post Label">
-                                                                    <rect key="frame" x="0.0" y="22" width="515" height="47"/>
+                                                                    <rect key="frame" x="0.0" y="22" width="515" height="48"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="26p-gd-cYr"/>
                                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="vht-sj-ZRD"/>
@@ -350,7 +350,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="584" height="334"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="CJZ-vA-948" id="n1t-5M-724">
-                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="333"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="333.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaking away..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-g9-LTK" userLabel="KakPost">
@@ -532,7 +532,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qgw-Ig-LvE">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qgw-Ig-LvE">
                                 <rect key="frame" x="290" y="405" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -544,11 +544,13 @@
                             <constraint firstItem="TP8-ka-3Kg" firstAttribute="top" secondItem="pcj-gf-Wi0" secondAttribute="bottom" id="Eqc-k9-8uW"/>
                             <constraint firstItem="QgS-rD-Jbe" firstAttribute="top" secondItem="hcV-SK-6Sg" secondAttribute="bottom" constant="39" id="F2X-lN-3Rb"/>
                             <constraint firstItem="TP8-ka-3Kg" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="Fwd-nX-X0D"/>
+                            <constraint firstItem="qgw-Ig-LvE" firstAttribute="centerX" secondItem="TP8-ka-3Kg" secondAttribute="centerX" id="GlR-wl-NVn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TP8-ka-3Kg" secondAttribute="trailing" constant="6" id="Ljp-xZ-d9L"/>
                             <constraint firstItem="qam-aY-ETD" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="MDU-j7-JFb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qam-aY-ETD" secondAttribute="trailing" constant="6" id="NM1-7X-a2s"/>
                             <constraint firstItem="qam-aY-ETD" firstAttribute="leading" secondItem="fdR-Pl-MwN" secondAttribute="leadingMargin" constant="6" id="WCr-rT-nUz"/>
                             <constraint firstItem="hcV-SK-6Sg" firstAttribute="centerX" secondItem="qam-aY-ETD" secondAttribute="centerX" id="fiw-fa-SWA"/>
+                            <constraint firstItem="qgw-Ig-LvE" firstAttribute="centerY" secondItem="TP8-ka-3Kg" secondAttribute="centerY" id="gnd-ni-fEH"/>
                             <constraint firstItem="TP8-ka-3Kg" firstAttribute="leading" secondItem="fdR-Pl-MwN" secondAttribute="leadingMargin" constant="6" id="h0b-gS-RvP"/>
                             <constraint firstItem="pcj-gf-Wi0" firstAttribute="top" secondItem="qam-aY-ETD" secondAttribute="bottom" constant="22" id="tXQ-Iw-SZ7"/>
                             <constraint firstItem="hcV-SK-6Sg" firstAttribute="top" secondItem="TP8-ka-3Kg" secondAttribute="bottom" constant="25" id="zXL-Eq-uFB"/>
