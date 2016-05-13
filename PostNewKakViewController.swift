@@ -57,16 +57,18 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func tappedShare(sender: UIButton) {
         let pictureData = UIImageJPEGRepresentation(kakImage.image!, 0.8)
+        loadingSpinner.startAnimating()
+        kakButton.enabled = false
         
         let file = PFFile(name: "image", data: pictureData!)
         file!.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
             if succeeded {
-                // TODO: only exit on save if have error
                 print("upload succeeded!")
                 self.saveKak(file!);
             } else {
-                // TODO: show error view
                 print("upload failed")
+                self.presentErrorAlert()
+                self.kakButton.enabled = true
             }
             }, progressBlock: { percent in
                 print("Uploaded photo: \(percent)%")
@@ -81,12 +83,24 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
                 self.dismissPostKakView()
             } else {
                 if ((error?.userInfo["error"]) != nil) {
-                    // TODO: show error
+                    self.presentErrorAlert()
+                    self.kakButton.enabled = true
                     print("error saving kak")
+                    
                 }
             }
         }
     }
+    
+    func presentErrorAlert() {
+        let alertController = UIAlertController(title: "Upload Failed", message: "There was an error while uploading your photo!", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
     
     func dismissPostKakView() {
         // dismiss current view controller
