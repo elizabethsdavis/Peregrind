@@ -10,7 +10,8 @@ import UIKit
 
 class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var currentImage: UIImageView!
+//    @IBOutlet weak var currentImage: UIImageView!
+    var currentImage: UIImage? = nil
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     
@@ -52,7 +53,7 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("Got an image")
         if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            currentImage.image = pickedImage
+            currentImage = pickedImage
             
 //            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
 //            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
@@ -72,7 +73,7 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
                     print("presenting kak navigation controller")
                     if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
                         print(postKakController)
-                        postKakController.kakImage.image = self.currentImage.image
+                        postKakController.kakImage.image = self.currentImage
                     }
                 })
             }

@@ -95,7 +95,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     func presentErrorAlert() {
         let alertController = UIAlertController(title: "Upload Failed", message: "There was an error while uploading your photo!", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            self.dismissViewControllerAnimated(true, completion: nil)
+            //self.dismissViewControllerAnimated(true, completion: nil)
         }
         alertController.addAction(OKAction)
         self.presentViewController(alertController, animated: true, completion: nil)
