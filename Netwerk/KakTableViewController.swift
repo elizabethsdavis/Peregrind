@@ -84,7 +84,6 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         kak.text = kakPost.comment!
         kakCell.kakPostLabel.numberOfLines = 0;
         kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
-        kakCell.kakPostLabel.sizeToFit();
 
         kak.imageURL = NSURL(string: kakPost.user.objectForKey("faceBookProfilePicURL") as! String)!
         kak.user = kakPost.user.objectForKey("fullName") as! String
