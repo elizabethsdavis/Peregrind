@@ -54,9 +54,6 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
         print("Got an image")
         if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
             currentImage = pickedImage
-            
-//            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
-//            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
         }
         
         
@@ -65,10 +62,6 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
             print("dismissedViewController")
             
             if let postKakNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("PostNewKakNavigation") as? UINavigationController {
-//                print("presenting new view controller")
-//                if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
-//                    postKakController.kakImage.image = self.currentImage.image
-//                }
                 self.presentViewController(postKakNavigationController, animated: true, completion: {
                     print("presenting kak navigation controller")
                     if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
@@ -85,7 +78,7 @@ class kakCameraViewController: UIViewController, UIImagePickerControllerDelegate
         // switch tab back to main screen
         self.tabBarController?.selectedIndex = 0
         dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user selects cancel
+            
         })
     }
     

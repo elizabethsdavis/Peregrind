@@ -75,6 +75,10 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         })
     }
     
+    @IBAction func tappedCancel(sender: UIBarButtonItem) {
+        dismissPostKakView()
+    }
+    
     func saveKak(file: PFFile) {
         let kakPost = KakPost(image: file, user: PFUser.currentUser()!, comment: self.kakCaption.text)
         kakPost.saveInBackgroundWithBlock{ succeeded, error in

@@ -557,7 +557,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kdj-9v-15e">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HXr-Y8-inQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HXr-Y8-inQ">
+                            <connections>
+                                <action selector="tappedCancel:" destination="MvF-ea-d8U" id="FMQ-aP-ssr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="kakButton" destination="hcV-SK-6Sg" id="YKN-pH-eAh"/>
