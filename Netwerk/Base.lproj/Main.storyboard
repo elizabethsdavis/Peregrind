@@ -535,8 +535,8 @@
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
-                                                                <exclude reference="hZ4-xo-WXn"/>
                                                                 <exclude reference="LLn-dY-7cg"/>
+                                                                <exclude reference="hZ4-xo-WXn"/>
                                                             </mask>
                                                         </variation>
                                                     </imageView>
@@ -628,9 +628,9 @@
                                                         <mask key="constraints">
                                                             <exclude reference="9cO-Jk-NSD"/>
                                                             <exclude reference="tWy-VX-fXJ"/>
-                                                            <exclude reference="td6-Rv-FHt"/>
-                                                            <exclude reference="jbk-sC-Wh2"/>
                                                             <exclude reference="ZXy-FK-l8c"/>
+                                                            <exclude reference="jbk-sC-Wh2"/>
+                                                            <exclude reference="td6-Rv-FHt"/>
                                                         </mask>
                                                     </variation>
                                                 </tableViewCellContentView>
