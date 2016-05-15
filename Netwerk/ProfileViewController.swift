@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     var posts: NSArray = [
@@ -31,11 +31,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var userImage: UIImageView!
     
-    @IBOutlet weak var userPosts: UITableView!
-    
     var kaks = Array<Kak>() {
         didSet {
-            userPosts.reloadData()
+//            userPosts.reloadData()
         }
     }
     
@@ -46,6 +44,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,9 +59,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         imageView.contentMode = .ScaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
-        
-        userPosts.delegate = self
-        userPosts.dataSource = self
 
     }
     
@@ -96,36 +92,38 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    
+    
     // MARK: - Table view data source
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return kaks.count
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 3.0
-    }
-    
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = posts[indexPath.item] as? String
-        
-        let kak = kaks[indexPath.section]
-        
-        if let kakCell = cell as? ProfileViewCell {
-            kakCell.kak = kak;
-//            kakCell.kakPostLabel.numberOfLines = 0;
-//            kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
-//            kakCell.kakPostLabel.sizeToFit();
-        }
-        
-        return cell
-    }
-
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return kaks.count
+//    }
+//    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 3.0
+//    }
+//    
+//
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath)
+//        cell.textLabel?.text = posts[indexPath.item] as? String
+//        
+//        let kak = kaks[indexPath.section]
+//        
+//        if let kakCell = cell as? ProfileViewCell {
+//            kakCell.kak = kak;
+////            kakCell.kakPostLabel.numberOfLines = 0;
+////            kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
+////            kakCell.kakPostLabel.sizeToFit();
+//        }
+//        
+//        return cell
+//    }
+//
     
     // MARK: Actions
     

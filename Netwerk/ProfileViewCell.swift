@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ProfileViewCell: UITableViewCell {
+class ProfileViewCell: PFTableViewCell {
 
     
     @IBOutlet weak var kakPostLabel: UILabel!
     
-    @IBOutlet weak var kakImageView: UIImageView!
+    @IBOutlet weak var kakImageView: PFImageView!
     
     var kak: Kak? {
         didSet {
@@ -25,7 +25,6 @@ class ProfileViewCell: UITableViewCell {
         kakPostLabel?.attributedText = nil
         
         if let kak = self.kak {
-            downloadImage(kak.videoURL, toImageView: kakImageView)
             kakPostLabel.text = kak.text
         }
     }

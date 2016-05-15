@@ -24,6 +24,7 @@
 		965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */; };
 		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
 		B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */; };
+		B93100291CE8059F00276863 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93100281CE8059F00276863 /* ProfileTableViewController.swift */; };
 		B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C7351CDBEDE3003A8657 /* KakPost.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Netwerk-Bridging-Header.h"; sourceTree = "<group>"; };
 		B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeregrindTabBarController.swift; sourceTree = "<group>"; };
 		B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostNewKakViewController.swift; path = ../PostNewKakViewController.swift; sourceTree = "<group>"; };
+		B93100281CE8059F00276863 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		B954C7351CDBEDE3003A8657 /* KakPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 			children = (
 				449134231CDA8C7100E4154B /* ProfileViewCell.swift */,
 				449134211CD9C6B200E4154B /* ProfileViewController.swift */,
+				B93100281CE8059F00276863 /* ProfileTableViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
+				B93100291CE8059F00276863 /* ProfileTableViewController.swift in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */,
 				449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */,
