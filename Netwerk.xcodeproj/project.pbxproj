@@ -36,6 +36,10 @@
 		B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */; };
 		B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */; };
 		B9C28DD51CEAD8080061CED6 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */; };
+		B9EC48531CEAF7FE00374631 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EC484F1CEAF7FE00374631 /* FlurryEmpty.m */; };
+		B9EC48541CEAF7FE00374631 /* libFlurry_7.6.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC48511CEAF7FE00374631 /* libFlurry_7.6.3.a */; };
+		B9EC48571CEAF88000374631 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC48561CEAF88000374631 /* SystemConfiguration.framework */; };
+		B9EC48591CEAF88E00374631 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC48581CEAF88E00374631 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,11 @@
 		B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageCropView.swift; sourceTree = "<group>"; };
 		B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
 		B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
+		B9EC484E1CEAF7FE00374631 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		B9EC484F1CEAF7FE00374631 /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
+		B9EC48511CEAF7FE00374631 /* libFlurry_7.6.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.3.a; sourceTree = "<group>"; };
+		B9EC48561CEAF88000374631 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B9EC48581CEAF88E00374631 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EC48591CEAF88E00374631 /* Security.framework in Frameworks */,
+				B9EC48571CEAF88000374631 /* SystemConfiguration.framework in Frameworks */,
 				1B5EA6311CDB0F28000C69AF /* FBSDKShareKit.framework in Frameworks */,
+				B9EC48541CEAF7FE00374631 /* libFlurry_7.6.3.a in Frameworks */,
 				965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +180,8 @@
 		B91840211CD1CBFC00014BB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9EC48581CEAF88E00374631 /* Security.framework */,
+				B9EC48561CEAF88000374631 /* SystemConfiguration.framework */,
 				1B5EA6301CDB0F28000C69AF /* FBSDKShareKit.framework */,
 				203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */,
 			);
@@ -177,6 +191,7 @@
 		B9C28DBF1CEAD8080061CED6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B9EC484D1CEAF7FE00374631 /* Flurry */,
 				B9C28DC01CEAD8080061CED6 /* Assets.xcassets */,
 				B9C28DC11CEAD8080061CED6 /* FSAlbumView.swift */,
 				B9C28DC21CEAD8080061CED6 /* FSAlbumView.xib */,
@@ -190,6 +205,16 @@
 				B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		B9EC484D1CEAF7FE00374631 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				B9EC484E1CEAF7FE00374631 /* Flurry.h */,
+				B9EC484F1CEAF7FE00374631 /* FlurryEmpty.m */,
+				B9EC48511CEAF7FE00374631 /* libFlurry_7.6.3.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +358,7 @@
 				B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
+				B9EC48531CEAF7FE00374631 /* FlurryEmpty.m in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */,
 				B9C28DD01CEAD8080061CED6 /* FSCameraView.swift in Sources */,
@@ -466,6 +492,10 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -489,6 +519,10 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

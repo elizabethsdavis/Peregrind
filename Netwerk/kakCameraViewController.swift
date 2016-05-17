@@ -17,6 +17,8 @@ class kakCameraViewController: UIViewController, FusumaDelegate {
     let imagePicker: FusumaViewController! = FusumaViewController()
     
     override func viewDidLoad() {
+        Flurry.logEvent("Camera_view_opened")
+        
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.defaultMode = .Camera
@@ -40,6 +42,7 @@ class kakCameraViewController: UIViewController, FusumaDelegate {
     
     // MARK: FusumaDelegate Protocol
     func fusumaImageSelected(image: UIImage) {
+        Flurry.logEvent("Camera_view_selected_an_image")
         
         print("Image selected")
         currentImage = image

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        Flurry.startSession("BD9JFV6VWGV54KJC5BMN")
+        Flurry.logEvent("applicationDidFinishLaunching")
+        
         /* Register and connect with Parse backend. */
         Parse.setApplicationId("oNWlowHHo7G4KbhnA4zyDjygMZ38avt3zBFBfUni", clientKey: "mxkEtd1rMq94xG1URi0J9qQeHdHB8QTrGLnXf81e")
         
