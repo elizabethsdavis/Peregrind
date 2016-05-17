@@ -2,33 +2,30 @@
 //  ProfileTableViewController.swift
 //  Netwerk
 //
-//  Created by Megan Faulk on 5/16/16.
+//  Created by Juliana Cook on 5/13/16.
+//  Copyright © 2016 Elizabeth Davis. All rights reserved.
+//
+//
+//  KakTableViewController.swift
+//  Netwerk
+//
+//  Created by Elizabeth Davis on 4/25/16.
 //  Copyright © 2016 Elizabeth Davis. All rights reserved.
 //
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
+class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegate {
     
-    // MARK: Properties
     var posts: NSArray = [
         
-        ["user": "Juliana Cook", "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent.xx.fbcdn.net/v/t1.0-9/12321288_10153274616332215_1359127258490569704_n.jpg?oh=1a384987e0149b70a84900953f163429&oe=579CFDB1", "video_url":"https://goo.gl/KfKt6R"],
-        ["user": "Juliana Cook", "text": "so close", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent.xx.fbcdn.net/v/t1.0-9/12321288_10153274616332215_1359127258490569704_n.jpg?oh=1a384987e0149b70a84900953f163429&oe=579CFDB1", "video_url":"https://goo.gl/660Kug"],
-        
-        
-        
-        ["user": "Juliana Cook", "text": "Machining in the PRL for daysss", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent.xx.fbcdn.net/v/t1.0-9/12321288_10153274616332215_1359127258490569704_n.jpg?oh=1a384987e0149b70a84900953f163429&oe=579CFDB1", "video_url":"https://goo.gl/NMJVzk"],
-        
-        
-        ["user": "Juliana Cook", "text": "First music box prototype!", "created_at":"12/25/2016", "id_str":"0003", "image_url":"https://scontent.xx.fbcdn.net/v/t1.0-9/12321288_10153274616332215_1359127258490569704_n.jpg?oh=1a384987e0149b70a84900953f163429&oe=579CFDB1", "video_url":"https://goo.gl/lZeoQf"],
-        ]
+        ["user": "Elizabeth Davis", "text": "Got the light patterns working :)", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url": "https://goo.gl/MTGtp1"]]
     
     var kaks = Array<Kak>() {
         didSet {
+            //tableView.reloadData()
         }
     }
-    
     
     func loadKaks() {
         for i in 1...posts.count {
@@ -39,42 +36,49 @@ class ProfileTableViewController: UITableViewController {
     }
     
     
+    var searchText: String? {
+        didSet {
+            title = searchText
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        loadObjects()
+    }
+    
+    override func queryForTable() -> PFQuery {
+        let query = KakPost.query()
+        query?.whereKey("user", equalTo: PFUser.currentUser()!)
+        return query!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadKaks()
     }
     
-    
     private struct Storyboard {
-        static let kakCellIdentifier = "userKak"
+        static let userKakCellIdentifier = "userKak"
     }
     
     
-    // MARK: - Table view
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return kaks.count
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 3.0
-    }
-    
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = posts[indexPath.item] as? String
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
+        let kakCell = tableView.dequeueReusableCellWithIdentifier(Storyboard.userKakCellIdentifier, forIndexPath: indexPath) as! ProfileViewCell
+        let kakPost = object as! KakPost
         
-        let kak = kaks[indexPath.section]
+        // TODO: change this to make a new kak, or have KakTableViewCell accept a KakPost
+        let kak = kaks[0]
+        kakCell.kakImageView.file = kakPost.image
+        kak.text = kakPost.comment!
+        kakCell.kakPostLabel.numberOfLines = 0;
+        kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
         
-        if let kakCell = cell as? ProfileViewCell {
-            kakCell.kak = kak;
+        kakCell.kakImageView.loadInBackground(nil) { percent in
+            print("\(percent)% image loaded")
         }
         
-        return cell
+        kakCell.kak = kak
+        
+        return kakCell
     }
-
 }
