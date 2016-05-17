@@ -10,15 +10,22 @@ import UIKit
 
 class PostNewKakViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var kakProjectTransparencyView: UIView!
     @IBOutlet weak var kakImage: UIImageView!
     @IBOutlet weak var kakCaption: UITextView!
     @IBOutlet weak var kakButton: UIButton!
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
+    @IBOutlet weak var kakProjectDoneButton: UIButton!
+    @IBOutlet weak var kakProjectView: UIView!
+    @IBOutlet weak var kakProjectTextField: UITextField!
+    @IBOutlet weak var kakProjectPicker: UIPickerView!
     let defaultMessage = "What did you learn today?"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.kakProjectTransparencyView.hidden = true
+        self.kakProjectView.hidden = true
         self.kakCaption.delegate = self
         self.kakButton.layer.cornerRadius = 5;
         self.kakCaption.text = defaultMessage
@@ -56,6 +63,21 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         }
         return true
     }
+    
+    
+    
+    @IBAction func tappedChooseProject(sender: UIButton) {
+        print("choose project tapped")
+        kakProjectView.hidden = false
+        kakProjectTransparencyView.hidden = false
+    }
+    
+    
+    @IBAction func tappedDone(sender: AnyObject) {
+        kakProjectView.hidden = true
+        kakProjectTransparencyView.hidden = true
+    }
+    
     
     @IBAction func tappedShare(sender: UIButton) {
         if (self.kakCaption.text == "" || self.kakCaption.text == defaultMessage) {
