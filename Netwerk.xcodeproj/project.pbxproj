@@ -19,6 +19,7 @@
 		1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA6321CDB17C9000C69AF /* KakLoginViewController.swift */; };
 		1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */; };
 		1B5EA6391CDB4F5D000C69AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA6381CDB4F5D000C69AF /* Podfile */; };
+		445981261CEAEEED008D5F00 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445981251CEAEEED008D5F00 /* ProfileTableViewController.swift */; };
 		449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134211CD9C6B200E4154B /* ProfileViewController.swift */; };
 		449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134231CDA8C7100E4154B /* ProfileViewCell.swift */; };
 		965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */; };
@@ -55,6 +56,7 @@
 		1B5EA6381CDB4F5D000C69AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Netwerk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		204270503153AE27830000B6 /* Pods-Netwerk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.release.xcconfig"; sourceTree = "<group>"; };
+		445981251CEAEEED008D5F00 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		449134211CD9C6B200E4154B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		449134231CDA8C7100E4154B /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		4DE3B34DC6B68801D91A7D3F /* Pods-Netwerk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		1B5EA63D1CDB6B92000C69AF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				445981251CEAEEED008D5F00 /* ProfileTableViewController.swift */,
 				449134231CDA8C7100E4154B /* ProfileViewCell.swift */,
 				449134211CD9C6B200E4154B /* ProfileViewController.swift */,
 			);
@@ -331,6 +334,7 @@
 				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */,
 				B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */,
+				445981261CEAEEED008D5F00 /* ProfileTableViewController.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
