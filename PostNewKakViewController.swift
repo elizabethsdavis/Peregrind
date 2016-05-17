@@ -107,8 +107,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
 
     
     func dismissPostKakView() {
-        // dismiss current view controller
-        let presentingViewController: UIViewController! = self.presentingViewController
         
         // dismiss current view controller
         if let tabBarController = self.presentingViewController as? UITabBarController {
@@ -117,7 +115,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         }
         
         self.dismissViewControllerAnimated(false) {
-            presentingViewController.dismissViewControllerAnimated(false, completion: nil)
         }
     }
     

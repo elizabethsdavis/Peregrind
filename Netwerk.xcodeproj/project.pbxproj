@@ -25,6 +25,17 @@
 		B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */; };
 		B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */; };
 		B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C7351CDBEDE3003A8657 /* KakPost.swift */; };
+		B9C28DCB1CEAD8080061CED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DC01CEAD8080061CED6 /* Assets.xcassets */; };
+		B9C28DCC1CEAD8080061CED6 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC11CEAD8080061CED6 /* FSAlbumView.swift */; };
+		B9C28DCD1CEAD8080061CED6 /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DC21CEAD8080061CED6 /* FSAlbumView.xib */; };
+		B9C28DCE1CEAD8080061CED6 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC31CEAD8080061CED6 /* FSAlbumViewCell.swift */; };
+		B9C28DCF1CEAD8080061CED6 /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DC41CEAD8080061CED6 /* FSAlbumViewCell.xib */; };
+		B9C28DD01CEAD8080061CED6 /* FSCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC51CEAD8080061CED6 /* FSCameraView.swift */; };
+		B9C28DD11CEAD8080061CED6 /* FSCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DC61CEAD8080061CED6 /* FSCameraView.xib */; };
+		B9C28DD21CEAD8080061CED6 /* FSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC71CEAD8080061CED6 /* FSConstants.swift */; };
+		B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */; };
+		B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */; };
+		B9C28DD51CEAD8080061CED6 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +62,17 @@
 		B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeregrindTabBarController.swift; sourceTree = "<group>"; };
 		B918403B1CD29CD800014BB9 /* PostNewKakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostNewKakViewController.swift; path = ../PostNewKakViewController.swift; sourceTree = "<group>"; };
 		B954C7351CDBEDE3003A8657 /* KakPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakPost.swift; sourceTree = "<group>"; };
+		B9C28DC01CEAD8080061CED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9C28DC11CEAD8080061CED6 /* FSAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
+		B9C28DC21CEAD8080061CED6 /* FSAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSAlbumView.xib; sourceTree = "<group>"; };
+		B9C28DC31CEAD8080061CED6 /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumViewCell.swift; sourceTree = "<group>"; };
+		B9C28DC41CEAD8080061CED6 /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSAlbumViewCell.xib; sourceTree = "<group>"; };
+		B9C28DC51CEAD8080061CED6 /* FSCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSCameraView.swift; sourceTree = "<group>"; };
+		B9C28DC61CEAD8080061CED6 /* FSCameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSCameraView.xib; sourceTree = "<group>"; };
+		B9C28DC71CEAD8080061CED6 /* FSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSConstants.swift; sourceTree = "<group>"; };
+		B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageCropView.swift; sourceTree = "<group>"; };
+		B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
+		B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5EA6381CDB4F5D000C69AF /* Podfile */,
+				B9C28DBF1CEAD8080061CED6 /* Sources */,
 				1B26A07C1CCC487C0037DCFA /* Netwerk */,
 				1B26A07B1CCC487B0037DCFA /* Products */,
 				B91840211CD1CBFC00014BB9 /* Frameworks */,
@@ -151,6 +174,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9C28DBF1CEAD8080061CED6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B9C28DC01CEAD8080061CED6 /* Assets.xcassets */,
+				B9C28DC11CEAD8080061CED6 /* FSAlbumView.swift */,
+				B9C28DC21CEAD8080061CED6 /* FSAlbumView.xib */,
+				B9C28DC31CEAD8080061CED6 /* FSAlbumViewCell.swift */,
+				B9C28DC41CEAD8080061CED6 /* FSAlbumViewCell.xib */,
+				B9C28DC51CEAD8080061CED6 /* FSCameraView.swift */,
+				B9C28DC61CEAD8080061CED6 /* FSCameraView.xib */,
+				B9C28DC71CEAD8080061CED6 /* FSConstants.swift */,
+				B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */,
+				B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */,
+				B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +255,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B26A08A1CCC487C0037DCFA /* LaunchScreen.storyboard in Resources */,
+				B9C28DCD1CEAD8080061CED6 /* FSAlbumView.xib in Resources */,
 				1B26A0871CCC487C0037DCFA /* Assets.xcassets in Resources */,
+				B9C28DCF1CEAD8080061CED6 /* FSAlbumViewCell.xib in Resources */,
 				1B5EA6391CDB4F5D000C69AF /* Podfile in Resources */,
 				1B26A0851CCC487C0037DCFA /* Main.storyboard in Resources */,
+				B9C28DD11CEAD8080061CED6 /* FSCameraView.xib in Resources */,
+				B9C28DD51CEAD8080061CED6 /* FusumaViewController.xib in Resources */,
+				B9C28DCB1CEAD8080061CED6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,16 +321,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C28DCC1CEAD8080061CED6 /* FSAlbumView.swift in Sources */,
 				1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */,
+				B9C28DD21CEAD8080061CED6 /* FSConstants.swift in Sources */,
+				B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */,
 				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
 				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */,
+				B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */,
+				B9C28DD01CEAD8080061CED6 /* FSCameraView.swift in Sources */,
+				B9C28DCE1CEAD8080061CED6 /* FSAlbumViewCell.swift in Sources */,
 				449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */,
 				1B26A0DE1CD0A0340037DCFA /* Kak.swift in Sources */,
 			);
