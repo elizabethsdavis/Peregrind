@@ -23,7 +23,7 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
             loginViewController.delegate = self
             loginViewController.fields = .Facebook
             loginViewController.emailAsUsername = true
-            self.presentViewController(loginViewController, animated: false, completion: { self.fetchUserInfoFromFacebook() })
+            self.presentViewController(loginViewController, animated: false, completion: { })
         } else {
             //presentLoggedInAlert()
             self.dismissViewControllerAnimated(true, completion: nil)
@@ -42,6 +42,7 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.fetchUserInfoFromFacebook()
         self.dismissViewControllerAnimated(true, completion: nil)
         presentLoggedInAlert()
     }
