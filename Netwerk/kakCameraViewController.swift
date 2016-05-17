@@ -23,48 +23,20 @@ class kakCameraViewController: UIViewController, FusumaDelegate {
         imagePicker.modeOrder = .CameraFirst
         
         // white background color scheme
-//        fusumaBaseTintColor   = UIColor.hex("#9B9B9B", alpha: 1.0)
-//        fusumaTintColor       = UIColor.hex("#A7C8F3", alpha: 1.0)
-//        fusumaBackgroundColor = UIColor.hex("#FFFFFF", alpha: 1.0)
+        fusumaBaseTintColor   = UIColor.hex("#9B9B9B", alpha: 1.0)
+        fusumaTintColor       = UIColor.hex("#A7C8F3", alpha: 1.0)
+        fusumaBackgroundColor = UIColor.hex("#FFFFFF", alpha: 1.0)
         
         // blue background color scheme
-        fusumaBaseTintColor   = UIColor.hex("#9B9B9B", alpha: 1.0)
-        fusumaTintColor       = UIColor.hex("#FFFFFF", alpha: 1.0)
-        fusumaBackgroundColor = UIColor.hex("#A7C8F3", alpha: 1.0)
-        
-        
-//        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-//            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-//                imagePicker.allowsEditing = false
-//                imagePicker.sourceType = .Camera
-//                imagePicker.cameraCaptureMode = .Photo
-//            } else {
-//                print("Rear camera doesn't exist: Application cannot access the camera.")
-//            }
-//        } else {
-//            print("Camera inaccessible: Application cannot access the camera.")
-//        }
+//        fusumaBaseTintColor   = UIColor.hex("#9B9B9B", alpha: 1.0)
+//        fusumaTintColor       = UIColor.hex("#FFFFFF", alpha: 1.0)
+//        fusumaBackgroundColor = UIColor.hex("#A7C8F3", alpha: 1.0)
 
     }
     
     func displayCamera() {
         self.presentViewController(imagePicker, animated: true, completion: nil)
-        
-//        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-//            presentViewController(imagePicker, animated: true, completion: {})
-//        }
     }
-    
-//    override func viewWillAppear(animated: Bool) {
-//        print("camera view will appear")
-//        super.viewWillAppear(animated)
-//        // TODO: fix bug of reappearing 
-//        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-//            presentViewController(imagePicker, animated: true, completion: {})
-//        }
-//        
-//    }
-    
     
     // MARK: FusumaDelegate Protocol
     func fusumaImageSelected(image: UIImage) {
@@ -123,40 +95,6 @@ class kakCameraViewController: UIViewController, FusumaDelegate {
 //            
 //        })
     }
-
-    
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-//        print("Got an image")
-//        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-//            currentImage = pickedImage
-//        }
-//        
-//        
-//        imagePicker.dismissViewControllerAnimated(false, completion: {
-//            // Anything you want to happen when the user saves an image
-//            print("dismissedViewController")
-//            
-//            if let postKakNavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("PostNewKakNavigation") as? UINavigationController {
-//                self.presentViewController(postKakNavigationController, animated: true, completion: {
-//                    print("presenting kak navigation controller")
-//                    if let postKakController = postKakNavigationController.viewControllers[0] as? PostNewKakViewController {
-//                        print(postKakController)
-//                        postKakController.kakImage.image = self.currentImage
-//                    }
-//                })
-//            }
-//        })
-//    }
-    
-//    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-//        print("User canceled image")
-//        // switch tab back to main screen
-//        self.tabBarController?.selectedIndex = 0
-//        dismissViewControllerAnimated(true, completion: {
-//            
-//        })
-//    }
-    
 
     /*
     // MARK: - Navigation
