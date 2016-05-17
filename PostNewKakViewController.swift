@@ -32,6 +32,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -63,8 +64,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         }
         return true
     }
-    
-    
+
     
     @IBAction func tappedChooseProject(sender: UIButton) {
         print("choose project tapped")
