@@ -15,11 +15,13 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var kakButton: UIButton!
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
+    let defaultMessage = "What did you learn today?"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.kakCaption.delegate = self
         self.kakButton.layer.cornerRadius = 5;
+        self.kakCaption.text = defaultMessage
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
@@ -56,6 +58,12 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func tappedShare(sender: UIButton) {
+        if (self.kakCaption.text == "" || self.kakCaption.text == defaultMessage) {
+            self.presentErrorAlert("Add a Caption", message: "Please write a caption before submitting!")
+            return;
+        }
+        
+        
         let pictureData = UIImageJPEGRepresentation(kakImage.image!, 0.8)
         loadingSpinner.startAnimating()
         kakButton.enabled = false
@@ -67,7 +75,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
                 self.saveKak(file!);
             } else {
                 print("upload failed")
-                self.presentErrorAlert()
+                self.presentErrorAlert("Upload Failed", message: "There was an error while uploading your photo!")
                 self.kakButton.enabled = true
             }
             }, progressBlock: { percent in
@@ -87,7 +95,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
                 self.dismissPostKakView()
             } else {
                 if ((error?.userInfo["error"]) != nil) {
-                    self.presentErrorAlert()
+                    self.presentErrorAlert("Upload Failed", message: "There was an error while uploading your photo!")
                     self.kakButton.enabled = true
                     print("error saving kak")
                     
@@ -96,8 +104,8 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func presentErrorAlert() {
-        let alertController = UIAlertController(title: "Upload Failed", message: "There was an error while uploading your photo!", preferredStyle: .Alert)
+    func presentErrorAlert(title: String?, message: String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
             //self.dismissViewControllerAnimated(true, completion: nil)
         }
