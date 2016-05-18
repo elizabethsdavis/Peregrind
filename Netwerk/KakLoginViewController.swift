@@ -17,15 +17,6 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-//        if (FBSDKAccessToken.currentAccessToken() != nil) {
-//            self.fetchUserInforFromFacebook() // TODO: remove
-//            performSegueWithIdentifier("Proceed After Login", sender: self)
-//        } else {
-//            self.view.addSubview(loginButton)
-//            loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-//            loginButton.delegate = self
-//        }
     }
     
     var FBSDKLoginSuccess = false
@@ -33,7 +24,6 @@ class KakLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidAppear(animated: Bool) {
         if (FBSDKAccessToken.currentAccessToken() != nil || FBSDKLoginSuccess == true)
         {
-            self.fetchUserInforFromFacebook() // TODO: remove
             performSegueWithIdentifier("Proceed After Login", sender: self)
         }
     }

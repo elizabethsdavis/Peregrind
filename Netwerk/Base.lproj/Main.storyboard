@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SUl-Q9-5dR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SUl-Q9-5dR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -136,11 +136,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="460"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="459"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="459.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
-                                            <rect key="frame" x="16" y="18" width="584" height="664"/>
+                                            <rect key="frame" x="16" y="18" width="584" height="663"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54v-m1-yAU">
                                                     <rect key="frame" x="0.0" y="0.0" width="584" height="69"/>
@@ -166,14 +166,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-Z6-cr9">
                                                             <rect key="frame" x="69" y="0.0" width="515" height="69"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-ku-tyM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="515" height="22"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                                     <color key="textColor" red="0.59154612660000006" green="0.72481744930000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kaking away..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0y-nm-2SW" userLabel="Kak Post Label">
-                                                                    <rect key="frame" x="0.0" y="22" width="515" height="47"/>
+                                                                    <rect key="frame" x="0.0" y="22" width="515" height="48"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="26p-gd-cYr"/>
                                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="vht-sj-ZRD"/>
@@ -190,7 +190,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="79" width="584" height="585"/>
+                                                    <rect key="frame" x="0.0" y="79" width="584" height="584"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="584" id="HiH-CY-T9b"/>
                                                         <constraint firstAttribute="width" secondItem="ldu-Aw-xKh" secondAttribute="height" multiplier="292:99" id="yng-Ak-oS6"/>
@@ -419,7 +419,7 @@
                                 <rect key="frame" x="0.0" y="28" width="578" height="419"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdL-HW-ZGP" id="12H-bs-ESc">
-                                    <rect key="frame" x="0.0" y="0.0" width="578" height="418"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="578" height="418.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaking away..." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAO-Et-xC3" userLabel="Kak Post Label">

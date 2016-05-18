@@ -78,7 +78,6 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         let kakCell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath) as! KakTableViewCell
         let kakPost = object as! KakPost
         
-        // TODO: change this to make a new kak, or have KakTableViewCell accept a KakPost
         let kak = kaks[0]
         kakCell.kakImageView.file = kakPost.image
         kak.text = kakPost.comment!
@@ -94,20 +93,40 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         
         kakCell.kak = kak
         
+        // TODO: set the label for the tag, something along the lines of this once there is a label in the storyboard
+//        if let tagText = kakPost.tag?.tagText {
+//            kakCell.kakTagLabel = tagText
+//        }
+        
         return kakCell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // TODO: add actual functionality to see other postst with same tag
+        // TODO: add segue to table view of other posts with same tag as this post
         
-        // right now this is just a demo printing out the tag name of a given post
+        // right now this is just a demo showing how to print out the tag name of a given post
         // the "Options are great" post by Juliana has a tag titled "Flight Time"
         
-        var kakPost = self.objectAtIndexPath(indexPath) as! KakPost
+        let kakPost = self.objectAtIndexPath(indexPath) as! KakPost
         
         if kakPost.tag != nil {
-            var tagText = kakPost.tag!.tagText
+            let tagText = kakPost.tag!.tagText
             print(tagText)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // TODO: replace with actual segue identifier
+        if segue.identifier == "mySegue" {
+            // TODO: change if don't use TaggedKaksTableVC
+            let nextScene =  segue.destinationViewController as! TaggedKaksTableViewController
+            
+            // Pass the selected object to the new view controller.
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let kakPost = self.objectAtIndexPath(indexPath) as! KakPost
+                nextScene.tag = kakPost.tag
+            }
         }
     }
 }
