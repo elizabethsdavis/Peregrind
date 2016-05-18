@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostNewKakViewController: UIViewController, UITextViewDelegate {
+class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var kakProjectTransparencyView: UIView!
     @IBOutlet weak var kakImage: UIImageView!
@@ -16,11 +16,13 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var kakButton: UIButton!
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
+    @IBOutlet weak var kakChooseProjectButton: UIButton!
     @IBOutlet weak var kakProjectDoneButton: UIButton!
     @IBOutlet weak var kakProjectView: UIView!
     @IBOutlet weak var kakProjectTextField: UITextField!
     @IBOutlet weak var kakProjectPicker: UIPickerView!
     let defaultMessage = "What did you learn today?"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +30,16 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         self.kakProjectView.hidden = true
         self.kakCaption.delegate = self
         self.kakButton.layer.cornerRadius = 5;
+        self.kakChooseProjectButton.layer.cornerRadius = 5;
+        self.kakProjectDoneButton.layer.cornerRadius = 5;
         self.kakCaption.text = defaultMessage
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        self.kakProjectPicker.delegate = self
+        self.kakProjectPicker.dataSource = self
+        pickerData = ["Building the LED Cube", "Coding Breakout", "Learning About Politics", "Trying Out iOS", "Struggling to Cook"];
         
     }
     
@@ -146,6 +154,23 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate {
         
         self.dismissViewControllerAnimated(false) {
         }
+    }
+    
+    var pickerData: [String] = [String]()
+    
+    // The number of columns of data
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
     }
     
 
