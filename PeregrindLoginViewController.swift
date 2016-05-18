@@ -17,7 +17,6 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
     }
 
     override func viewDidAppear(animated: Bool) {
-        PFUser.logOut()
         super.viewDidAppear(animated)
         if (PFUser.currentUser() == nil) {
             //let loginViewController = PFLogInViewController()
