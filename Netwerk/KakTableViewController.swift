@@ -96,4 +96,18 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         
         return kakCell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // TODO: add actual functionality to see other postst with same tag
+        
+        // right now this is just a demo printing out the tag name of a given post
+        // the "Options are great" post by Juliana has a tag titled "Flight Time"
+        
+        var kakPost = self.objectAtIndexPath(indexPath) as! KakPost
+        
+        if kakPost.tag != nil {
+            var tagText = kakPost.tag!.tagText
+            print(tagText)
+        }
+    }
 }
