@@ -16,6 +16,9 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     @IBOutlet weak var kakButton: UIButton!
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     
+    @IBOutlet weak var kakAlbumNameLabel: UILabel!
+    
+    /* Choose Project Pop-Up View Components */
     @IBOutlet weak var kakChooseProjectButton: UIButton!
     @IBOutlet weak var kakProjectDoneButton: UIButton!
     @IBOutlet weak var kakProjectView: UIView!
@@ -33,6 +36,12 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         self.kakChooseProjectButton.layer.cornerRadius = 5;
         self.kakProjectDoneButton.layer.cornerRadius = 5;
         self.kakCaption.text = defaultMessage
+        
+        let caption = "Add to My Photos" as NSString
+        let range = caption.rangeOfString("Add to ")
+        let labelString = NSMutableAttributedString(string: caption as String)
+        labelString.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range: range)
+        kakAlbumNameLabel.attributedText = labelString;
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
@@ -74,10 +83,8 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     }
     
     var project: String?
-
     
     @IBAction func tappedChooseProject(sender: UIButton) {
-        print("choose project tapped")
         kakProjectView.hidden = false
         kakProjectTransparencyView.hidden = false
     }
@@ -86,21 +93,24 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     @IBAction func tappedDone(sender: AnyObject) {
         kakProjectView.hidden = true
         kakProjectTransparencyView.hidden = true
+        var caption: NSString
+        if (!(project ?? "").isEmpty) {
+            caption = "Add to " + project!
+        } else {
+            caption = "Add to My Photos"
+        }
         
-//        kakProjectPicker.atindex
-        
-//        project = kakProjectPicker.
-        
-        
+        let range = caption.rangeOfString("Add to ")
+        let labelString = NSMutableAttributedString(string: caption as String)
+        labelString.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range: range)
+        kakAlbumNameLabel.attributedText = labelString;
     }
-    
     
     @IBAction func tappedShare(sender: UIButton) {
         if (self.kakCaption.text == "" || self.kakCaption.text == defaultMessage) {
             self.presentErrorAlert("Add a Caption", message: "Please write a caption before submitting!")
             return;
         }
-        
         
         let pictureData = UIImageJPEGRepresentation(kakImage.image!, 0.8)
         loadingSpinner.startAnimating()
@@ -126,7 +136,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     }
     
     @IBAction func editingPostNameChanged(sender: UITextField) {
-        print("editing changed...")
         kakProjectPicker.selectRow(0, inComponent: 0, animated: true)
     }
     
