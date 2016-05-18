@@ -124,21 +124,21 @@
         <scene sceneID="EPj-gI-xRo">
             <objects>
                 <tableViewController storyboardIdentifier="Kak Newsfeed" id="Wst-yb-ZOM" customClass="KakTableViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="400" sectionHeaderHeight="28" sectionFooterHeight="28" id="kRv-6x-JaY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="460" sectionHeaderHeight="28" sectionFooterHeight="28" id="kRv-6x-JaY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Kak" rowHeight="400" id="Y8a-AE-Ipn" customClass="KakTableViewCell" customModule="Netwerk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="400"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Kak" rowHeight="460" id="Y8a-AE-Ipn" customClass="KakTableViewCell" customModule="Netwerk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="460"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Y8a-AE-Ipn" id="pH5-zf-jh3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="459"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-CN-an6">
-                                            <rect key="frame" x="16" y="18" width="584" height="379"/>
+                                            <rect key="frame" x="16" y="18" width="584" height="664"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54v-m1-yAU">
                                                     <rect key="frame" x="0.0" y="0.0" width="584" height="69"/>
@@ -188,9 +188,9 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Aw-xKh" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="79" width="584" height="300"/>
+                                                    <rect key="frame" x="0.0" y="79" width="584" height="585"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="HiH-CY-T9b"/>
+                                                        <constraint firstAttribute="height" constant="584" id="HiH-CY-T9b"/>
                                                         <constraint firstAttribute="width" secondItem="ldu-Aw-xKh" secondAttribute="height" multiplier="292:99" id="yng-Ak-oS6"/>
                                                     </constraints>
                                                     <variation key="default">
@@ -408,36 +408,36 @@
         <scene sceneID="psS-nw-W0t">
             <objects>
                 <tableViewController id="0Cc-D1-36I" customClass="ProfileTableViewController" customModule="Netwerk" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="361" sectionHeaderHeight="28" sectionFooterHeight="28" id="XmV-Os-xRX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="419" sectionHeaderHeight="28" sectionFooterHeight="28" id="XmV-Os-xRX">
                         <rect key="frame" x="0.0" y="0.0" width="578" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="userKak" selectionStyle="default" indentationWidth="10" reuseIdentifier="userKak" rowHeight="361" id="hdL-HW-ZGP" customClass="ProfileViewCell" customModule="Netwerk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="578" height="361"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="userKak" selectionStyle="default" indentationWidth="10" reuseIdentifier="userKak" rowHeight="419" id="hdL-HW-ZGP" customClass="ProfileViewCell" customModule="Netwerk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="578" height="419"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdL-HW-ZGP" id="12H-bs-ESc">
-                                    <rect key="frame" x="0.0" y="0.0" width="578" height="360"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="578" height="418"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-6A-2h0" customClass="PFImageView">
-                                            <rect key="frame" x="0.0" y="64" width="578" height="289"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaking away..." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAO-Et-xC3" userLabel="Kak Post Label">
-                                            <rect key="frame" x="0.0" y="3" width="578" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="578" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="58" id="TAm-zh-ZpS"/>
+                                                <constraint firstAttribute="height" constant="48" id="TAm-zh-ZpS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.46772411619999998" green="0.46772411619999998" blue="0.46772411619999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-6A-2h0" customClass="PFImageView">
+                                            <rect key="frame" x="0.0" y="47" width="578" height="370"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tbd-6A-2h0" firstAttribute="top" secondItem="12H-bs-ESc" secondAttribute="topMargin" constant="56" id="6l8-cy-nVJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="tbd-6A-2h0" secondAttribute="bottom" constant="7" id="GOm-TW-ILA"/>
+                                        <constraint firstItem="tbd-6A-2h0" firstAttribute="top" secondItem="12H-bs-ESc" secondAttribute="topMargin" constant="39" id="6l8-cy-nVJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="tbd-6A-2h0" secondAttribute="bottom" constant="1" id="GOm-TW-ILA"/>
                                         <constraint firstItem="tbd-6A-2h0" firstAttribute="leading" secondItem="12H-bs-ESc" secondAttribute="leading" id="O1e-ww-fUq"/>
-                                        <constraint firstItem="QAO-Et-xC3" firstAttribute="top" secondItem="12H-bs-ESc" secondAttribute="top" constant="3" id="esD-9O-bM7"/>
+                                        <constraint firstItem="QAO-Et-xC3" firstAttribute="top" secondItem="12H-bs-ESc" secondAttribute="top" id="esD-9O-bM7"/>
                                         <constraint firstItem="tbd-6A-2h0" firstAttribute="trailing" secondItem="12H-bs-ESc" secondAttribute="trailingMargin" constant="8" id="lVS-Tj-hsi"/>
                                         <constraint firstItem="QAO-Et-xC3" firstAttribute="leading" secondItem="12H-bs-ESc" secondAttribute="leadingMargin" constant="-8" id="nEZ-ha-yht"/>
                                         <constraint firstItem="QAO-Et-xC3" firstAttribute="centerX" secondItem="12H-bs-ESc" secondAttribute="centerX" id="nOy-IR-4xL"/>
