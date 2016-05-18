@@ -1,21 +1,20 @@
 //
-//  ProfileTableViewController.swift
+//  TaggedKaksTableViewController.swift
 //  Netwerk
 //
-//  Created by Juliana Cook on 5/13/16.
+//  Created by Juliana Cook on 5/18/16.
 //  Copyright © 2016 Elizabeth Davis. All rights reserved.
 //
-//
-//  KakTableViewController.swift
-//  Netwerk
-//
-//  Created by Elizabeth Davis on 4/25/16.
-//  Copyright © 2016 Elizabeth Davis. All rights reserved.
-//
+
 
 import UIKit
 
-class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegate {
+// TODO: Connect this with a the table view for tagged kaks
+//       Might be able to just reuse the profile, so this might not be necessary
+class TaggedKaksTableViewController: PFQueryTableViewController, UITextFieldDelegate {
+    
+    // TODO: must set this tag variable on segue to this view, so that it can be filtered
+    var tag: Tag?
     
     var posts: NSArray = [
         
@@ -36,19 +35,13 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
     }
     
     
-    var searchText: String? {
-        didSet {
-            title = searchText
-        }
-    }
-    
     override func viewWillAppear(animated: Bool) {
         loadObjects()
     }
     
     override func queryForTable() -> PFQuery {
         let query = KakPost.query()
-        query?.whereKey("user", equalTo: PFUser.currentUser()!)
+        query?.whereKey("tag", equalTo: tag!)
         return query!
     }
     
@@ -58,11 +51,13 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
     }
     
     private struct Storyboard {
+        // TODO: change this if no longer using Profile View cells
         static let userKakCellIdentifier = "userKak"
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
+        // TODO: change this if no longer using Profile View cells
         let kakCell = tableView.dequeueReusableCellWithIdentifier(Storyboard.userKakCellIdentifier, forIndexPath: indexPath) as! ProfileViewCell
         let kakPost = object as! KakPost
         
@@ -80,4 +75,5 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
         
         return kakCell
     }
+    
 }

@@ -172,8 +172,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         let labelString = NSMutableAttributedString(string: caption as String)
         labelString.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range: range)
         kakAlbumNameLabel.attributedText = labelString;
-        
-        // TODO: pass on data about project tag
     }
     
     @IBAction func tappedShare(sender: UIButton) {

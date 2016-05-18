@@ -39,6 +39,7 @@
 		B9C28DD51CEAD8080061CED6 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */; };
 		B9DCB6A51CEC24FB003B27B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A41CEC24FB003B27B3 /* Constants.swift */; };
 		B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A61CEC254D003B27B3 /* Tag.swift */; };
+		B9DCB6A91CEC53C2003B27B3 /* TaggedKaksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
 		B9DCB6A41CEC24FB003B27B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9DCB6A61CEC254D003B27B3 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedKaksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				1B5EA63E1CDB6BA5000C69AF /* Newsfeed */,
 				1B5EA63D1CDB6B92000C69AF /* Profile */,
 				1B5EA63F1CDB6BB5000C69AF /* Create Posts */,
+				B9DCB6AA1CEC53CB003B27B3 /* Tagged Kaks */,
 				1B26A0DD1CD0A0340037DCFA /* Kak.swift */,
 				1B26A0861CCC487C0037DCFA /* Assets.xcassets */,
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
@@ -199,6 +202,14 @@
 				B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		B9DCB6AA1CEC53CB003B27B3 /* Tagged Kaks */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */,
+			);
+			name = "Tagged Kaks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */,
 				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
+				B9DCB6A91CEC53C2003B27B3 /* TaggedKaksTableViewController.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
 				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */,
