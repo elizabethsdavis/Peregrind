@@ -17,9 +17,11 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
     }
 
     override func viewDidAppear(animated: Bool) {
+        PFUser.logOut()
         super.viewDidAppear(animated)
         if (PFUser.currentUser() == nil) {
-            let loginViewController = PFLogInViewController()
+            //let loginViewController = PFLogInViewController()
+            let loginViewController = LoginViewController()
             loginViewController.delegate = self
             loginViewController.fields = .Facebook
             loginViewController.emailAsUsername = true
