@@ -42,6 +42,60 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
         }
     }
     
+    var sections: [Int: [PFObject]] = Dictionary()
+    var sectionKeys: [Int] = Array()
+    
+    // MARK: Init
+    
+    convenience init(className: String?) {
+        self.init(style: .Plain, className: className)
+        
+        title = "Sectioned Table"
+        pullToRefreshEnabled = true
+    }
+    
+    var tagIndexes: [String] = ["My Photos"]
+    
+    // MARK: Data
+    
+    override func objectsDidLoad(error: NSError?) {
+        super.objectsDidLoad(error)
+        
+        sections.removeAll(keepCapacity: false)
+        if let objects = objects {
+            for object in objects {
+                var sectionNumber: Int?
+                if let tag = object["tag"] as? Netwerk.Tag {
+                    if let tagText = tag.tagText {
+                        if tagIndexes.contains(tagText) {
+                            sectionNumber = tagIndexes.indexOf(tagText)!
+                        } else {
+                            tagIndexes.append(tagText)
+                            sectionNumber = tagIndexes.indexOf(tagText)!
+                        }
+                    }
+                }
+                if sectionNumber == nil {
+                    sectionNumber = 0
+                }
+                var array = sections[sectionNumber!] ?? Array()
+                array.append(object)
+                sections[sectionNumber!] = array
+            }
+        }
+        sectionKeys = sections.keys.sort(<)
+        
+        tableView.reloadData()
+    }
+    
+    override func objectAtIndexPath(indexPath: NSIndexPath?) -> PFObject? {
+        if let indexPath = indexPath {
+            let array = sections[sectionKeys[indexPath.section]]
+            return array?[indexPath.row]
+        }
+        return nil
+    }
+    
     override func viewWillAppear(animated: Bool) {
         loadObjects()
     }
@@ -79,5 +133,17 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
         kakCell.kak = kak
         
         return kakCell
+    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let array = sections[sectionKeys[section]]
+        return array?.count ?? 0
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "\(tagIndexes[section])"
     }
 }

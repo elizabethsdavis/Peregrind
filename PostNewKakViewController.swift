@@ -26,7 +26,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     @IBOutlet weak var kakProjectPicker: UIPickerView!
     let defaultMessage = "What did you learn today?"
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.kakProjectTransparencyView.hidden = true
@@ -42,7 +42,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         let labelString = NSMutableAttributedString(string: caption as String)
         labelString.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range: range)
         kakAlbumNameLabel.attributedText = labelString;
-
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
@@ -129,7 +129,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         } catch {
             print("Error saving newly created user tag")
         }
-        
         return userTag
     }
     
@@ -155,7 +154,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
             chosenData = pickerData[selectedIndex]
             chosenLabel = pickerLabels[selectedIndex]
         }
-        
         
         // Update label on add new kak screen
         var caption: NSString
@@ -215,7 +213,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
                     self.presentErrorAlert("Upload Failed", message: "There was an error while uploading your photo!")
                     self.kakButton.enabled = true
                     print("error saving kak")
-                    
                 }
             }
         }
@@ -229,7 +226,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         alertController.addAction(OKAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
     
     func dismissPostKakView() {
         
@@ -268,13 +265,13 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
