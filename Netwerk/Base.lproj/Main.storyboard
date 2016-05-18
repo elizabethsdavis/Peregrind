@@ -519,6 +519,12 @@
                                 <color key="textColor" red="0.46772411619999998" green="0.46772411619999998" blue="0.46772411619999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In My Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="y96-V8-M0Q">
+                                <rect key="frame" x="99" y="441" width="400" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What did you learn today?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TP8-ka-3Kg">
                                 <rect key="frame" x="26" y="348" width="548" height="77"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -556,7 +562,7 @@
                                     <constraint firstAttribute="width" constant="150" id="fBn-KP-N7i"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Choose Project">
+                                <state key="normal" title="Change Project">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -656,8 +662,10 @@
                             <constraint firstItem="gHQ-0K-qDx" firstAttribute="trailing" secondItem="TP8-ka-3Kg" secondAttribute="trailing" id="J2l-Hr-tcx"/>
                             <constraint firstItem="gHQ-0K-qDx" firstAttribute="leading" secondItem="TP8-ka-3Kg" secondAttribute="leading" id="M5V-b9-uGv"/>
                             <constraint firstItem="qam-aY-ETD" firstAttribute="centerX" secondItem="fdR-Pl-MwN" secondAttribute="centerX" id="MDU-j7-JFb"/>
+                            <constraint firstItem="q9r-nM-qHt" firstAttribute="top" secondItem="y96-V8-M0Q" secondAttribute="bottom" constant="13" id="Mkj-wL-7tv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qam-aY-ETD" secondAttribute="trailing" constant="6" id="NM1-7X-a2s"/>
                             <constraint firstItem="nLK-G5-9AP" firstAttribute="centerX" secondItem="qam-aY-ETD" secondAttribute="centerX" id="R8X-T4-hGd"/>
+                            <constraint firstItem="y96-V8-M0Q" firstAttribute="centerX" secondItem="nLK-G5-9AP" secondAttribute="centerX" id="RRH-fi-x6N"/>
                             <constraint firstItem="TP8-ka-3Kg" firstAttribute="bottom" secondItem="qgw-Ig-LvE" secondAttribute="bottom" id="Rvn-U0-wsJ"/>
                             <constraint firstItem="pcj-gf-Wi0" firstAttribute="top" secondItem="qam-aY-ETD" secondAttribute="bottom" constant="22" id="TAK-Jk-afg"/>
                             <constraint firstItem="qam-aY-ETD" firstAttribute="leading" secondItem="fdR-Pl-MwN" secondAttribute="leadingMargin" constant="6" id="WCr-rT-nUz"/>
@@ -670,6 +678,7 @@
                             <constraint firstItem="nLK-G5-9AP" firstAttribute="bottom" secondItem="QgS-rD-Jbe" secondAttribute="top" id="dhW-aD-AE5"/>
                             <constraint firstItem="TP8-ka-3Kg" firstAttribute="top" secondItem="pcj-gf-Wi0" secondAttribute="bottom" id="gHE-VE-6gh"/>
                             <constraint firstItem="hcV-SK-6Sg" firstAttribute="top" secondItem="TP8-ka-3Kg" secondAttribute="bottom" constant="50" id="gyM-vr-qfr"/>
+                            <constraint firstItem="y96-V8-M0Q" firstAttribute="leading" secondItem="fdR-Pl-MwN" secondAttribute="leadingMargin" constant="79" id="ik5-Ma-CPE"/>
                             <constraint firstItem="hcV-SK-6Sg" firstAttribute="firstBaseline" secondItem="q9r-nM-qHt" secondAttribute="baseline" id="kuf-6B-28B"/>
                             <constraint firstItem="QgS-rD-Jbe" firstAttribute="top" secondItem="hcV-SK-6Sg" secondAttribute="bottom" constant="71" id="lmW-T6-Oxu"/>
                             <constraint firstItem="QgS-rD-Jbe" firstAttribute="top" secondItem="gHQ-0K-qDx" secondAttribute="bottom" constant="116" id="ncm-UQ-idt"/>
@@ -678,19 +687,21 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="2UH-LB-MyW"/>
                                 <exclude reference="ncm-UQ-idt"/>
+                                <exclude reference="2UH-LB-MyW"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="kdj-9v-15e">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="HXr-Y8-inQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="tappedCancel:" destination="MvF-ea-d8U" id="FMQ-aP-ssr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="kakAlbumNameLabel" destination="y96-V8-M0Q" id="uO6-PY-Tpk"/>
                         <outlet property="kakButton" destination="hcV-SK-6Sg" id="YKN-pH-eAh"/>
                         <outlet property="kakCaption" destination="TP8-ka-3Kg" id="9aT-aV-3zn"/>
                         <outlet property="kakChooseProjectButton" destination="q9r-nM-qHt" id="yk0-gc-ygu"/>
