@@ -39,7 +39,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         
         self.kakProjectPicker.delegate = self
         self.kakProjectPicker.dataSource = self
-        pickerData = ["Building the LED Cube", "Coding Breakout", "Learning About Politics", "Trying Out iOS", "Struggling to Cook"];
+        pickerData = ["Create New...", "Building the LED Cube", "Coding Breakout", "Learning About Politics", "Trying Out iOS", "Struggling to Cook"];
         
     }
     
@@ -72,6 +72,8 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         }
         return true
     }
+    
+    var project: String?
 
     
     @IBAction func tappedChooseProject(sender: UIButton) {
@@ -84,6 +86,12 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     @IBAction func tappedDone(sender: AnyObject) {
         kakProjectView.hidden = true
         kakProjectTransparencyView.hidden = true
+        
+//        kakProjectPicker.atindex
+        
+//        project = kakProjectPicker.
+        
+        
     }
     
     
@@ -115,6 +123,11 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     
     @IBAction func tappedCancel(sender: UIBarButtonItem) {
         dismissPostKakView()
+    }
+    
+    @IBAction func editingPostNameChanged(sender: UITextField) {
+        print("editing changed...")
+        kakProjectPicker.selectRow(0, inComponent: 0, animated: true)
     }
     
     func saveKak(file: PFFile) {
@@ -173,7 +186,18 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         return pickerData[row]
     }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if (row == 0) {
+            project = ""
+        } else {
+            project = pickerData[row]
+        }
 
+        kakProjectTextField.text = project
+    }
+    
+    
     /*
     // MARK: - Navigation
 
