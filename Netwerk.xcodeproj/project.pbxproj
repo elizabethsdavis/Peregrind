@@ -37,6 +37,8 @@
 		B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */; };
 		B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */; };
 		B9C28DD51CEAD8080061CED6 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */; };
+		B9DCB6A51CEC24FB003B27B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A41CEC24FB003B27B3 /* Constants.swift */; };
+		B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A61CEC254D003B27B3 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageCropView.swift; sourceTree = "<group>"; };
 		B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
 		B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
+		B9DCB6A41CEC24FB003B27B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B9DCB6A61CEC254D003B27B3 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
 				1B26A08B1CCC487C0037DCFA /* Info.plist */,
 				B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */,
+				B9DCB6A41CEC24FB003B27B3 /* Constants.swift */,
+				B9DCB6A61CEC254D003B27B3 /* Tag.swift */,
 			);
 			path = Netwerk;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 				B9C28DCC1CEAD8080061CED6 /* FSAlbumView.swift in Sources */,
 				1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */,
 				B9C28DD21CEAD8080061CED6 /* FSConstants.swift in Sources */,
+				B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */,
 				B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */,
 				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
@@ -339,6 +346,7 @@
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */,
+				B9DCB6A51CEC24FB003B27B3 /* Constants.swift in Sources */,
 				B9C28DD01CEAD8080061CED6 /* FSCameraView.swift in Sources */,
 				B9C28DCE1CEAD8080061CED6 /* FSAlbumViewCell.swift in Sources */,
 				449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */,

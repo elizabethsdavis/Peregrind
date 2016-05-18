@@ -25,7 +25,20 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
             loginViewController.emailAsUsername = true
             self.presentViewController(loginViewController, animated: false, completion: { })
         } else {
-            //presentLoggedInAlert()
+            // if user already exists, make sure they have tags
+            let query = Tag.query()
+            query?.whereKey("user", equalTo: PFUser.currentUser()!)
+            
+            do {
+                let tags = try query?.findObjects() as! [Tag]
+                
+                if (tags.count == 0) {
+                    createInitialTag(PFUser.currentUser()!)
+                }
+            } catch {
+                print("Error retrieving tags")
+            }
+            
             self.dismissViewControllerAnimated(true, completion: nil)
             self.performSegueWithIdentifier("Progress After Login", sender: self)
         }
@@ -45,6 +58,20 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
         self.fetchUserInfoFromFacebook()
         self.dismissViewControllerAnimated(true, completion: nil)
         presentLoggedInAlert()
+    }
+    
+    func createInitialTag(currentUser: PFUser) {
+        let userTag = Tag(user: currentUser, tagText: "My Photos")
+        userTag.saveInBackgroundWithBlock({
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                currentUser.addObject(userTag, forKey: User.userTags)
+                currentUser.saveInBackground()
+            } else {
+                // There was a problem, check error.description
+            }
+        })
+        
     }
     
     // from http://stackoverflow.com/questions/30252844/how-to-get-the-username-from-facebook-in-swift
@@ -68,6 +95,7 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
                     currentUser.setObject(userProfileImageURL, forKey: "faceBookProfilePicURL")
                     currentUser.saveInBackground()
                     
+                    self.createInitialTag(currentUser)
                 }else{
                     print("Error getting facebook data")
                     //                    self.showErrorMessage(error)
