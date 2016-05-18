@@ -46,10 +46,31 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PostNewKakViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PostNewKakViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         self.kakProjectPicker.delegate = self
         self.kakProjectPicker.dataSource = self
-        pickerData = ["Create New...", "Building the LED Cube", "Coding Breakout", "Learning About Politics", "Trying Out iOS", "Struggling to Cook"];
+        pickerLabels = ["Create New..."]
+        pickerData = [ nil ]
         
+        let query = Tag.query()
+        query?.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        do {
+            if let tags = try query?.findObjects() as? [Tag] {
+                for tag in tags {
+                    pickerLabels.append(tag.tagText!)
+                    pickerData.append(tag)
+                    
+                    if (tag.tagText! == "My Photos") {
+                        chosenData = tag
+                    }
+                }
+            }
+        } catch {
+            print("Error retrieving tags for currentUser")
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -69,8 +90,16 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         }
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     func textViewDidBeginEditing(textView: UITextView) {
-        self.kakCaption.text = ""
+        if (self.kakCaption.text == defaultMessage) {
+            self.kakCaption.text = ""
+        }
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
@@ -82,20 +111,59 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         return true
     }
     
-    var project: String?
+    
+    var chosenData: Tag?
+    var chosenLabel: String = "My Photos"
     
     @IBAction func tappedChooseProject(sender: UIButton) {
+        dismissKeyboard()
         kakProjectView.hidden = false
         kakProjectTransparencyView.hidden = false
     }
     
+    func createNewTag(tagText: String, user: PFUser) -> Tag{
+        let userTag = Tag(user: user, tagText: tagText)
+        
+        do {
+            try userTag.save()
+            user.addObject(userTag, forKey: User.userTags)
+            try user.save()
+            
+        } catch {
+            print("Error saving newly created user tag")
+        }
+        
+        return userTag
+    }
     
     @IBAction func tappedDone(sender: AnyObject) {
+        dismissKeyboard()
         kakProjectView.hidden = true
         kakProjectTransparencyView.hidden = true
+        
+        // Save the current label and tag data, make new tag if needed
+        let selectedIndex = kakProjectPicker.selectedRowInComponent(0)
+        if (selectedIndex == 0) {
+            // Picked the "Create New..." option, must check they wrote something
+            if (!(kakProjectTextField.text ?? "").isEmpty) {
+                // create a new tag and save it for the user
+                chosenData = createNewTag(kakProjectTextField.text!, user: PFUser.currentUser()!)
+                chosenLabel = kakProjectTextField.text!
+                
+            } else {
+                // didn't write anything, do nothing and default to whatever they chose before
+            }
+            
+        } else {
+            chosenData = pickerData[selectedIndex]
+            chosenLabel = pickerLabels[selectedIndex]
+        }
+        
+        
+        // Update label on add new kak screen
         var caption: NSString
-        if (!(project ?? "").isEmpty) {
-            caption = "Add to " + project!
+        if (!(chosenLabel ?? "").isEmpty) {
+            caption = "Add to " + chosenLabel
         } else {
             caption = "Add to My Photos"
         }
@@ -104,6 +172,8 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         let labelString = NSMutableAttributedString(string: caption as String)
         labelString.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range: range)
         kakAlbumNameLabel.attributedText = labelString;
+        
+        // TODO: pass on data about project tag
     }
     
     @IBAction func tappedShare(sender: UIButton) {
@@ -140,7 +210,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     }
     
     func saveKak(file: PFFile) {
-        let kakPost = KakPost(image: file, user: PFUser.currentUser()!, comment: self.kakCaption.text)
+        let kakPost = KakPost(image: file, user: PFUser.currentUser()!, comment: self.kakCaption.text, tag: chosenData)
         kakPost.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
                 print("successfully saved kak")
@@ -178,7 +248,8 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         }
     }
     
-    var pickerData: [String] = [String]()
+    var pickerLabels: [String] = [String]()
+    var pickerData: [Tag?] = [Tag?]()
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -192,18 +263,12 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return pickerLabels[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if (row == 0) {
-            project = ""
-        } else {
-            project = pickerData[row]
-        }
-
-        kakProjectTextField.text = project
+        let label = row == 0 ? "" : pickerLabels[row]
+        kakProjectTextField.text = label
     }
     
     

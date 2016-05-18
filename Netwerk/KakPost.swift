@@ -23,6 +23,15 @@ class KakPost: PFObject, PFSubclassing {
         self.comment = comment
     }
     
+    init(image: PFFile, user: PFUser, comment: String?, tag: Tag?) {
+        super.init()
+        
+        self.image = image
+        self.user = user
+        self.comment = comment
+        self.tag = tag
+    }
+    
     override init() {
         super.init()
     }
