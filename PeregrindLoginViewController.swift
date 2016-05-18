@@ -26,19 +26,8 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
             loginViewController.emailAsUsername = true
             self.presentViewController(loginViewController, animated: false, completion: { })
         } else {
-            // if user already exists, make sure they have tags
-            let query = Tag.query()
-            query?.whereKey("user", equalTo: PFUser.currentUser()!)
-            
-            do {
-                let tags = try query?.findObjects() as! [Tag]
-                
-                if (tags.count == 0) {
-                    createInitialTag(PFUser.currentUser()!)
-                }
-            } catch {
-                print("Error retrieving tags")
-            }
+            // ensure that user has tags
+            self.createInitialTags(PFUser.currentUser()!)
             
             self.dismissViewControllerAnimated(true, completion: nil)
             self.performSegueWithIdentifier("Progress After Login", sender: self)
@@ -61,17 +50,25 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
         presentLoggedInAlert()
     }
     
-    func createInitialTag(currentUser: PFUser) {
-        let userTag = Tag(user: currentUser, tagText: "My Photos")
-        userTag.saveInBackgroundWithBlock({
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                currentUser.addObject(userTag, forKey: User.userTags)
-                currentUser.saveInBackground()
-            } else {
-                // There was a problem, check error.description
+    func createInitialTags(currentUser: PFUser) {
+        let query = Tag.query()
+        query?.whereKey("user", equalTo: currentUser)
+        
+        do {
+            let tags = try query?.findObjects() as! [Tag]
+            
+            if (tags.count == 0) {
+                let userTag = Tag(user: currentUser, tagText: "My Photos")
+                do {
+                    try userTag.save()
+                } catch {
+                    
+                }
             }
-        })
+        } catch {
+            print("Error retrieving tags")
+        }
+        
         
     }
     
@@ -94,9 +91,13 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
                     currentUser.setObject(userId, forKey: "faceBookID")
                     currentUser.setObject(userName, forKey: "fullName")
                     currentUser.setObject(userProfileImageURL, forKey: "faceBookProfilePicURL")
-                    currentUser.saveInBackground()
                     
-                    self.createInitialTag(currentUser)
+                    do {
+                        try currentUser.save()
+                        self.createInitialTags(currentUser)
+                    } catch {
+                        
+                    }
                 }else{
                     print("Error getting facebook data")
                     //                    self.showErrorMessage(error)

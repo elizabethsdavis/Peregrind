@@ -126,9 +126,6 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
         
         do {
             try userTag.save()
-            user.addObject(userTag, forKey: User.userTags)
-            try user.save()
-            
         } catch {
             print("Error saving newly created user tag")
         }
