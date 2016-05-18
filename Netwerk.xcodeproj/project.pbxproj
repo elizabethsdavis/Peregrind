@@ -250,7 +250,7 @@
 				TargetAttributes = {
 					1B26A0791CCC487B0037DCFA = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 88V3W6A832;
+						DevelopmentTeam = 7X2XZ6L5E5;
 					};
 				};
 			};
@@ -494,7 +494,7 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = meganfaulk.Netwerk;
+				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netwerk/Netwerk-Bridging-Header.h";
@@ -517,7 +517,7 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = meganfaulk.Netwerk;
+				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netwerk/Netwerk-Bridging-Header.h";
