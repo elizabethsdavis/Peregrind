@@ -13,6 +13,7 @@ class KakPost: PFObject, PFSubclassing {
     @NSManaged var image: PFFile
     @NSManaged var user: PFUser
     @NSManaged var comment: String?
+    @NSManaged var tag: Tag?
     
     init(image: PFFile, user: PFUser, comment: String?) {
         super.init()
@@ -21,6 +22,16 @@ class KakPost: PFObject, PFSubclassing {
         self.user = user
         self.comment = comment
     }
+    
+    init(image: PFFile, user: PFUser, comment: String?, tag: Tag?) {
+        super.init()
+        
+        self.image = image
+        self.user = user
+        self.comment = comment
+        self.tag = tag
+    }
+
     
     override init() {
         super.init()
@@ -40,6 +51,7 @@ class KakPost: PFObject, PFSubclassing {
     override class func query() -> PFQuery? {
         let query = PFQuery(className: KakPost.parseClassName())
         query.includeKey("user")
+        query.includeKey("tag")
         query.orderByDescending("createdAt")
         return query
     }

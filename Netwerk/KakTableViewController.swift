@@ -78,6 +78,7 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         let kakCell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath) as! KakTableViewCell
         let kakPost = object as! KakPost
         
+        
         // TODO: change this to make a new kak, or have KakTableViewCell accept a KakPost
         let kak = kaks[0]
         kakCell.kakImageView.file = kakPost.image
@@ -95,5 +96,11 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         kakCell.kak = kak
         
         return kakCell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var objectForIndex = self.objectAtIndexPath(indexPath) as! KakPost
+        
+        
     }
 }
