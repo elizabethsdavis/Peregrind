@@ -265,7 +265,7 @@
 				TargetAttributes = {
 					1B26A0791CCC487B0037DCFA = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7X2XZ6L5E5;
+						DevelopmentTeam = 7P54MW8E96;
 					};
 				};
 			};
@@ -501,8 +501,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizabeth Davis (R58S3338B5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Elizabeth Davis (R58S3338B5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -514,7 +514,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
+				PRODUCT_BUNDLE_IDENTIFIER = cs377u.Peregrind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netwerk/Netwerk-Bridging-Header.h";
@@ -528,8 +528,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizabeth Davis (R58S3338B5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Elizabeth Davis (R58S3338B5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -541,7 +541,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
+				PRODUCT_BUNDLE_IDENTIFIER = cs377u.Peregrind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netwerk/Netwerk-Bridging-Header.h";
