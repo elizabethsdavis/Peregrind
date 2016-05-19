@@ -54,7 +54,7 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
         pullToRefreshEnabled = true
     }
     
-    var tagIndexes: [String] = ["My Photos"]
+    var tagIndexes: [String] = []
     
     // MARK: Data
     
