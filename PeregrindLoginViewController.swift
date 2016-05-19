@@ -58,21 +58,26 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
         let query = Tag.query()
         query?.whereKey("user", equalTo: currentUser)
         
-        do {
-            let tags = try query?.findObjects() as! [Tag]
-            
-            if (tags.count == 0) {
-                let userTag = Tag(user: currentUser, tagText: "My Photos")
-                do {
-                    try userTag.save()
-                } catch {
-                    Flurry.logError("Error creating initial tags", message: "", exception: nil);
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            do {
+                let tags = try query?.findObjects() as! [Tag]
+                
+                if (tags.count == 0) {
+                    let userTag = Tag(user: currentUser, tagText: "My Photos")
+                    do {
+                        try userTag.save()
+                    } catch {
+                        Flurry.logError("Error creating initial tags", message: "", exception: nil);
+                    }
                 }
+            } catch {
+                print("Error retrieving tags")
             }
-        } catch {
-            print("Error retrieving tags")
+            dispatch_async(dispatch_get_main_queue()) {
+                // update some UI
+            }
         }
-        
         
     }
     
