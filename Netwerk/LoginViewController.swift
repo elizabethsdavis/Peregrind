@@ -14,6 +14,7 @@ class LoginViewController: PFLogInViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Flurry.logEvent("LoginViewController_viewDidLoad")
         
         // set our custom background image
         backgroundImage = UIImageView(image: UIImage(named: "login2"))

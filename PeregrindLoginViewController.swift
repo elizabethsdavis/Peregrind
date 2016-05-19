@@ -11,6 +11,7 @@ import UIKit
 class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDelegate {
 
     override func viewDidLoad() {
+        Flurry.logEvent("PeregrindLoginViewController_viewDidLoad")
         super.viewDidLoad()
    
         // Do any additional setup after loading the view.
@@ -26,6 +27,9 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
             loginViewController.emailAsUsername = true
             self.presentViewController(loginViewController, animated: false, completion: { })
         } else {
+            let userId = PFUser.currentUser()?.objectForKey("faceBookID") as! String
+            Flurry.setUserID(userId)
+            
             // ensure that user has tags
             self.createInitialTags(PFUser.currentUser()!)
             
@@ -62,7 +66,7 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
                 do {
                     try userTag.save()
                 } catch {
-                    
+                    Flurry.logError("Error creating initial tags", message: "", exception: nil);
                 }
             }
         } catch {
@@ -91,15 +95,17 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
                     currentUser.setObject(userId, forKey: "faceBookID")
                     currentUser.setObject(userName, forKey: "fullName")
                     currentUser.setObject(userProfileImageURL, forKey: "faceBookProfilePicURL")
+                    Flurry.setUserID(userId)
                     
                     do {
                         try currentUser.save()
                         self.createInitialTags(currentUser)
                     } catch {
-                        
+                        Flurry.logError("Error creating initial tags", message: "", exception: nil);
                     }
                 }else{
                     print("Error getting facebook data")
+                    Flurry.logError("Error getting facebook data", message: "", exception: nil);
                     //                    self.showErrorMessage(error)
                     //                    withcompletionHandler(success: false)
                 }

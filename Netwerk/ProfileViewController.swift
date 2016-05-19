@@ -34,6 +34,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Flurry.logEvent("ProfileViewController_viewDidLoad")
         
         usernameLabel.text = (PFUser.currentUser()?.objectForKey("fullName") as! String)
         let facebookPhotoURL = NSURL(string: PFUser.currentUser()!.objectForKey("faceBookProfilePicURL") as! String)!

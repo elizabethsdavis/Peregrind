@@ -41,6 +41,9 @@
 		B9DCB6A51CEC24FB003B27B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A41CEC24FB003B27B3 /* Constants.swift */; };
 		B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A61CEC254D003B27B3 /* Tag.swift */; };
 		B9DCB6A91CEC53C2003B27B3 /* TaggedKaksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */; };
+		B9DCB6BB1CED6AED003B27B3 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6B71CED6AED003B27B3 /* FlurryEmpty.m */; };
+		B9DCB6BC1CED6AED003B27B3 /* libFlurry_7.6.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DCB6B91CED6AED003B27B3 /* libFlurry_7.6.3.a */; };
+		B9DCB6BD1CED6AED003B27B3 /* libFlurryWatch_7.6.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DCB6BA1CED6AED003B27B3 /* libFlurryWatch_7.6.3.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,11 @@
 		B9DCB6A41CEC24FB003B27B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9DCB6A61CEC254D003B27B3 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedKaksTableViewController.swift; sourceTree = "<group>"; };
+		B9DCB6B61CED6AED003B27B3 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Flurry/Flurry.h; sourceTree = "<group>"; };
+		B9DCB6B71CED6AED003B27B3 /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlurryEmpty.m; path = Flurry/FlurryEmpty.m; sourceTree = "<group>"; };
+		B9DCB6B81CED6AED003B27B3 /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlurryWatch.h; path = Flurry/FlurryWatch.h; sourceTree = "<group>"; };
+		B9DCB6B91CED6AED003B27B3 /* libFlurry_7.6.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.6.3.a; path = Flurry/libFlurry_7.6.3.a; sourceTree = "<group>"; };
+		B9DCB6BA1CED6AED003B27B3 /* libFlurryWatch_7.6.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurryWatch_7.6.3.a; path = Flurry/libFlurryWatch_7.6.3.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B5EA6311CDB0F28000C69AF /* FBSDKShareKit.framework in Frameworks */,
+				B9DCB6BC1CED6AED003B27B3 /* libFlurry_7.6.3.a in Frameworks */,
+				B9DCB6BD1CED6AED003B27B3 /* libFlurryWatch_7.6.3.a in Frameworks */,
 				965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +202,11 @@
 		B9C28DBF1CEAD8080061CED6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B9DCB6B61CED6AED003B27B3 /* Flurry.h */,
+				B9DCB6B71CED6AED003B27B3 /* FlurryEmpty.m */,
+				B9DCB6B81CED6AED003B27B3 /* FlurryWatch.h */,
+				B9DCB6B91CED6AED003B27B3 /* libFlurry_7.6.3.a */,
+				B9DCB6BA1CED6AED003B27B3 /* libFlurryWatch_7.6.3.a */,
 				B9C28DC01CEAD8080061CED6 /* Assets.xcassets */,
 				B9C28DC11CEAD8080061CED6 /* FSAlbumView.swift */,
 				B9C28DC21CEAD8080061CED6 /* FSAlbumView.xib */,
@@ -347,6 +362,7 @@
 				B9C28DCC1CEAD8080061CED6 /* FSAlbumView.swift in Sources */,
 				1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */,
 				B9C28DD21CEAD8080061CED6 /* FSConstants.swift in Sources */,
+				B9DCB6BB1CED6AED003B27B3 /* FlurryEmpty.m in Sources */,
 				B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */,
 				B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */,
 				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
@@ -494,6 +510,10 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -517,6 +537,10 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/Flurry",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

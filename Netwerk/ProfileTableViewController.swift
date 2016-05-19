@@ -109,6 +109,7 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         loadKaks()
+        
     }
     
     private struct Storyboard {
@@ -145,5 +146,9 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "\(tagIndexes[section])"
+    }
+    
+    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        Flurry.logEvent("KakTableViewController_scrollViewWillBeginDragging")
     }
 }

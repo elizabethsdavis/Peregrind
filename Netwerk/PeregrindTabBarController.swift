@@ -11,6 +11,7 @@ import UIKit
 class PeregrindTabBarController : UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
+        Flurry.logAllPageViewsForTarget(self)
         super.viewDidLoad()
         self.delegate = self
     }

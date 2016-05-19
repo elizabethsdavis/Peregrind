@@ -29,6 +29,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Flurry.logEvent("PostNewKakViewController_viewDidLoad")
         self.kakProjectTransparencyView.hidden = true
         self.kakProjectView.hidden = true
         self.kakCaption.delegate = self
@@ -70,6 +71,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
             }
         } catch {
             print("Error retrieving tags for currentUser")
+            Flurry.logError("Error retrieving user tags", message: "", exception: nil);
         }
     }
     
@@ -97,6 +99,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
+        Flurry.logEvent("KakTableViewController_textViewDidBeginEditing")
         if (self.kakCaption.text == defaultMessage) {
             self.kakCaption.text = ""
         }
@@ -116,23 +119,27 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     var chosenLabel: String = "My Photos"
     
     @IBAction func tappedChooseProject(sender: UIButton) {
+        Flurry.logEvent("KakTableViewController_tappedChooseProject")
         dismissKeyboard()
         kakProjectView.hidden = false
         kakProjectTransparencyView.hidden = false
     }
     
     func createNewTag(tagText: String, user: PFUser) -> Tag{
+        Flurry.logEvent("KakTableViewController_createNewTag")
         let userTag = Tag(user: user, tagText: tagText)
         
         do {
             try userTag.save()
         } catch {
             print("Error saving newly created user tag")
+            Flurry.logError("Error saving new user tags", message: "", exception: nil);
         }
         return userTag
     }
     
     @IBAction func tappedDone(sender: AnyObject) {
+        Flurry.logEvent("KakTableViewController_tappedDone_tagging")
         dismissKeyboard()
         kakProjectView.hidden = true
         kakProjectTransparencyView.hidden = true
@@ -170,6 +177,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     }
     
     @IBAction func tappedShare(sender: UIButton) {
+        Flurry.logEvent("KakTableViewController_tappedShare")
         if (self.kakCaption.text == "" || self.kakCaption.text == defaultMessage) {
             self.presentErrorAlert("Add a Caption", message: "Please write a caption before submitting!")
             return;
@@ -195,6 +203,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
     }
     
     @IBAction func tappedCancel(sender: UIBarButtonItem) {
+        Flurry.logEvent("KakTableViewController_tappedCancel")
         dismissPostKakView()
     }
     
@@ -209,6 +218,7 @@ class PostNewKakViewController: UIViewController, UITextViewDelegate, UIPickerVi
                 print("successfully saved kak")
                 self.dismissPostKakView()
             } else {
+                Flurry.logError("Error saving kak", message: "", exception: nil);
                 if ((error?.userInfo["error"]) != nil) {
                     self.presentErrorAlert("Upload Failed", message: "There was an error while uploading your photo!")
                     self.kakButton.enabled = true

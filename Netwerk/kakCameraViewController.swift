@@ -87,6 +87,7 @@ class kakCameraViewController: UIViewController, FusumaDelegate {
     }
     
     func fusumaClosed() {
+        Flurry.logEvent("Camera_view_closed")
         
         print("Called when the close button is pressed")
         // Xed out view

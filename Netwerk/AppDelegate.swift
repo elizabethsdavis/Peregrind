@@ -25,25 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-        
-//        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions);
-//        return true
-//        
-//        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        var initialViewController: UIViewController
-//        
-//        if (FBSDKAccessToken.currentAccessToken() != nil) {
-//            let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Peregrind Tab Bar Controller") as! PeregrindTabBarController
-//            initialViewController = vc
-//            
-//        } else {
-//            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Peregrind Login View Controller")
-//        }
-//        
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
-        
         return true
     }
     

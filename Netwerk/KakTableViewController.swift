@@ -60,6 +60,7 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Flurry.logEvent("KakTableViewController_viewDidLoad")
         loadKaks()
         let image = UIImage(named: Storyboard.peregrindLogoImageAssetName)
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -129,4 +130,10 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        Flurry.logEvent("KakTableViewController_scrollViewWillBeginDragging")
+    }
+    
+    
 }
