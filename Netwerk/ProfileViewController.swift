@@ -32,27 +32,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userImage: UIImageView!
     
     
-    var kaks = Array<Kak>() {
-        didSet {
-            // not sure what to put here...
-        }
-    }
-    
-    func loadKaks() {
-        for i in 1...posts.count {
-            if let kak = Kak(data: posts[i-1] as? NSDictionary) {
-                kaks.append(kak)
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadKaks()
-        if let kak = Kak(data: posts[0] as? NSDictionary) {
-            usernameLabel.text = kak.user
-            downloadImage(kak.imageURL, toImageView: userImage)
-        }
+        
+        usernameLabel.text = (PFUser.currentUser()?.objectForKey("fullName") as! String)
+        let facebookPhotoURL = NSURL(string: PFUser.currentUser()!.objectForKey("faceBookProfilePicURL") as! String)!
+        downloadImage(facebookPhotoURL, toImageView: userImage)
+        
         setProfileImageView(userImage)
         let image = UIImage(named: Storyboard.peregrindLogoImageAssetName)
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))

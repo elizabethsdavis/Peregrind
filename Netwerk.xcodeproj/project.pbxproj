@@ -20,6 +20,7 @@
 		1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA6361CDB4C4F000C69AF /* PeregrindLoginViewController.swift */; };
 		1B5EA6391CDB4F5D000C69AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA6381CDB4F5D000C69AF /* Podfile */; };
 		445981261CEAEEED008D5F00 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445981251CEAEEED008D5F00 /* ProfileTableViewController.swift */; };
+		448109011CEC429A000C4BDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448109001CEC429A000C4BDA /* LoginViewController.swift */; };
 		449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134211CD9C6B200E4154B /* ProfileViewController.swift */; };
 		449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449134231CDA8C7100E4154B /* ProfileViewCell.swift */; };
 		965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */; };
@@ -37,10 +38,9 @@
 		B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */; };
 		B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */; };
 		B9C28DD51CEAD8080061CED6 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */; };
-		B9EC48531CEAF7FE00374631 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EC484F1CEAF7FE00374631 /* FlurryEmpty.m */; };
-		B9EC48541CEAF7FE00374631 /* libFlurry_7.6.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC48511CEAF7FE00374631 /* libFlurry_7.6.3.a */; };
-		B9EC48571CEAF88000374631 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC48561CEAF88000374631 /* SystemConfiguration.framework */; };
-		B9EC48591CEAF88E00374631 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EC48581CEAF88E00374631 /* Security.framework */; };
+		B9DCB6A51CEC24FB003B27B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A41CEC24FB003B27B3 /* Constants.swift */; };
+		B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A61CEC254D003B27B3 /* Tag.swift */; };
+		B9DCB6A91CEC53C2003B27B3 /* TaggedKaksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +61,7 @@
 		203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Netwerk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		204270503153AE27830000B6 /* Pods-Netwerk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.release.xcconfig"; sourceTree = "<group>"; };
 		445981251CEAEEED008D5F00 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		448109001CEC429A000C4BDA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		449134211CD9C6B200E4154B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		449134231CDA8C7100E4154B /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		4DE3B34DC6B68801D91A7D3F /* Pods-Netwerk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwerk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Netwerk/Pods-Netwerk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,11 +80,9 @@
 		B9C28DC81CEAD8080061CED6 /* FSImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageCropView.swift; sourceTree = "<group>"; };
 		B9C28DC91CEAD8080061CED6 /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
 		B9C28DCA1CEAD8080061CED6 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
-		B9EC484E1CEAF7FE00374631 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		B9EC484F1CEAF7FE00374631 /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
-		B9EC48511CEAF7FE00374631 /* libFlurry_7.6.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.3.a; sourceTree = "<group>"; };
-		B9EC48561CEAF88000374631 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B9EC48581CEAF88E00374631 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B9DCB6A41CEC24FB003B27B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B9DCB6A61CEC254D003B27B3 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedKaksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EC48591CEAF88E00374631 /* Security.framework in Frameworks */,
-				B9EC48571CEAF88000374631 /* SystemConfiguration.framework in Frameworks */,
 				1B5EA6311CDB0F28000C69AF /* FBSDKShareKit.framework in Frameworks */,
-				B9EC48541CEAF7FE00374631 /* libFlurry_7.6.3.a in Frameworks */,
 				965FE961A5582FC47FCE85A4 /* libPods-Netwerk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,15 +125,19 @@
 				1B26A07D1CCC487C0037DCFA /* AppDelegate.swift */,
 				1B26A0831CCC487C0037DCFA /* Main.storyboard */,
 				1B5EA6321CDB17C9000C69AF /* KakLoginViewController.swift */,
+				448109001CEC429A000C4BDA /* LoginViewController.swift */,
 				B91840351CD1F18A00014BB9 /* PeregrindTabBarController.swift */,
 				1B5EA63E1CDB6BA5000C69AF /* Newsfeed */,
 				1B5EA63D1CDB6B92000C69AF /* Profile */,
 				1B5EA63F1CDB6BB5000C69AF /* Create Posts */,
+				B9DCB6AA1CEC53CB003B27B3 /* Tagged Kaks */,
 				1B26A0DD1CD0A0340037DCFA /* Kak.swift */,
 				1B26A0861CCC487C0037DCFA /* Assets.xcassets */,
 				1B26A0881CCC487C0037DCFA /* LaunchScreen.storyboard */,
 				1B26A08B1CCC487C0037DCFA /* Info.plist */,
 				B91840221CD1CF4100014BB9 /* Netwerk-Bridging-Header.h */,
+				B9DCB6A41CEC24FB003B27B3 /* Constants.swift */,
+				B9DCB6A61CEC254D003B27B3 /* Tag.swift */,
 			);
 			path = Netwerk;
 			sourceTree = "<group>";
@@ -183,8 +183,6 @@
 		B91840211CD1CBFC00014BB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9EC48581CEAF88E00374631 /* Security.framework */,
-				B9EC48561CEAF88000374631 /* SystemConfiguration.framework */,
 				1B5EA6301CDB0F28000C69AF /* FBSDKShareKit.framework */,
 				203DB3FC188AECCDF8E77144 /* libPods-Netwerk.a */,
 			);
@@ -194,7 +192,6 @@
 		B9C28DBF1CEAD8080061CED6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B9EC484D1CEAF7FE00374631 /* Flurry */,
 				B9C28DC01CEAD8080061CED6 /* Assets.xcassets */,
 				B9C28DC11CEAD8080061CED6 /* FSAlbumView.swift */,
 				B9C28DC21CEAD8080061CED6 /* FSAlbumView.xib */,
@@ -210,14 +207,12 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		B9EC484D1CEAF7FE00374631 /* Flurry */ = {
+		B9DCB6AA1CEC53CB003B27B3 /* Tagged Kaks */ = {
 			isa = PBXGroup;
 			children = (
-				B9EC484E1CEAF7FE00374631 /* Flurry.h */,
-				B9EC484F1CEAF7FE00374631 /* FlurryEmpty.m */,
-				B9EC48511CEAF7FE00374631 /* libFlurry_7.6.3.a */,
+				B9DCB6A81CEC53C2003B27B3 /* TaggedKaksTableViewController.swift */,
 			);
-			path = Flurry;
+			name = "Tagged Kaks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,19 +347,22 @@
 				B9C28DCC1CEAD8080061CED6 /* FSAlbumView.swift in Sources */,
 				1B5EA6371CDB4C4F000C69AF /* PeregrindLoginViewController.swift in Sources */,
 				B9C28DD21CEAD8080061CED6 /* FSConstants.swift in Sources */,
+				B9DCB6A71CEC254D003B27B3 /* Tag.swift in Sources */,
 				B9C28DD41CEAD8080061CED6 /* FusumaViewController.swift in Sources */,
 				449134241CDA8C7100E4154B /* ProfileViewCell.swift in Sources */,
 				1B26A0B71CD03E1C0037DCFA /* KakTableViewCell.swift in Sources */,
+				B9DCB6A91CEC53C2003B27B3 /* TaggedKaksTableViewController.swift in Sources */,
 				1B26A0B31CCEE9450037DCFA /* KakTableViewController.swift in Sources */,
 				B91840361CD1F18A00014BB9 /* PeregrindTabBarController.swift in Sources */,
 				B954C7361CDBEDE3003A8657 /* KakPost.swift in Sources */,
+				448109011CEC429A000C4BDA /* LoginViewController.swift in Sources */,
 				B9C28DD31CEAD8080061CED6 /* FSImageCropView.swift in Sources */,
 				445981261CEAEEED008D5F00 /* ProfileTableViewController.swift in Sources */,
 				1B26A0E21CD1886A0037DCFA /* kakCameraViewController.swift in Sources */,
 				1B26A07E1CCC487C0037DCFA /* AppDelegate.swift in Sources */,
-				B9EC48531CEAF7FE00374631 /* FlurryEmpty.m in Sources */,
 				B918403C1CD29CD800014BB9 /* PostNewKakViewController.swift in Sources */,
 				1B5EA6331CDB17C9000C69AF /* KakLoginViewController.swift in Sources */,
+				B9DCB6A51CEC24FB003B27B3 /* Constants.swift in Sources */,
 				B9C28DD01CEAD8080061CED6 /* FSCameraView.swift in Sources */,
 				B9C28DCE1CEAD8080061CED6 /* FSAlbumViewCell.swift in Sources */,
 				449134221CD9C6B200E4154B /* ProfileViewController.swift in Sources */,
@@ -496,10 +494,6 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sources/Flurry",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -523,10 +517,6 @@
 				INFOPLIST_FILE = Netwerk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sources/Flurry",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = elizabethdavis.Netwerk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

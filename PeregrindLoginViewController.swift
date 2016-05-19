@@ -19,13 +19,16 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if (PFUser.currentUser() == nil) {
-            let loginViewController = PFLogInViewController()
+            //let loginViewController = PFLogInViewController()
+            let loginViewController = LoginViewController()
             loginViewController.delegate = self
             loginViewController.fields = .Facebook
             loginViewController.emailAsUsername = true
-            self.presentViewController(loginViewController, animated: false, completion: { self.fetchUserInfoFromFacebook() })
+            self.presentViewController(loginViewController, animated: false, completion: { })
         } else {
-            //presentLoggedInAlert()
+            // ensure that user has tags
+            self.createInitialTags(PFUser.currentUser()!)
+            
             self.dismissViewControllerAnimated(true, completion: nil)
             self.performSegueWithIdentifier("Progress After Login", sender: self)
         }
@@ -42,8 +45,31 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.fetchUserInfoFromFacebook()
         self.dismissViewControllerAnimated(true, completion: nil)
         presentLoggedInAlert()
+    }
+    
+    func createInitialTags(currentUser: PFUser) {
+        let query = Tag.query()
+        query?.whereKey("user", equalTo: currentUser)
+        
+        do {
+            let tags = try query?.findObjects() as! [Tag]
+            
+            if (tags.count == 0) {
+                let userTag = Tag(user: currentUser, tagText: "My Photos")
+                do {
+                    try userTag.save()
+                } catch {
+                    
+                }
+            }
+        } catch {
+            print("Error retrieving tags")
+        }
+        
+        
     }
     
     // from http://stackoverflow.com/questions/30252844/how-to-get-the-username-from-facebook-in-swift
@@ -65,8 +91,13 @@ class PeregrindLoginViewController: UIViewController, PFLogInViewControllerDeleg
                     currentUser.setObject(userId, forKey: "faceBookID")
                     currentUser.setObject(userName, forKey: "fullName")
                     currentUser.setObject(userProfileImageURL, forKey: "faceBookProfilePicURL")
-                    currentUser.saveInBackground()
                     
+                    do {
+                        try currentUser.save()
+                        self.createInitialTags(currentUser)
+                    } catch {
+                        
+                    }
                 }else{
                     print("Error getting facebook data")
                     //                    self.showErrorMessage(error)

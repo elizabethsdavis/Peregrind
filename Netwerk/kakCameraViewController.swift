@@ -93,10 +93,6 @@ class kakCameraViewController: UIViewController, FusumaDelegate {
         
         // switch tab back to main screen
         self.tabBarController?.selectedIndex = 0
-        // TODO: is this necessary?
-//        dismissViewControllerAnimated(true, completion: {
-//            
-//        })
     }
 
     /*

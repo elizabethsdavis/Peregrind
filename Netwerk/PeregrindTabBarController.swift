@@ -21,7 +21,6 @@ class PeregrindTabBarController : UITabBarController, UITabBarControllerDelegate
         
         if let cameraViewController = viewController as? kakCameraViewController {
             print("tab bar selected camera")
-            // TODO: display camera setting
             cameraViewController.displayCamera()
         }
         
