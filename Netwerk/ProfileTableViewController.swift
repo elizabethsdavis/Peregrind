@@ -15,30 +15,17 @@
 
 import UIKit
 
-class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegate {
+class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegate, ProfileProjectHeaderTableViewCellDelegate {
     
-    var posts: NSArray = [
-        
-        ["user": "Elizabeth Davis", "text": "Got the light patterns working :)", "created_at":"03/04/2016", "id_str":"0001", "image_url":"https://scontent-sjc2-1.xx.fbcdn.net/t31.0-8/s960x960/12605370_1408376795859140_1184442056620693026_o.jpg", "video_url": "https://goo.gl/MTGtp1"]]
+    var posts: NSArray = [["user": "", "text": "", "created_at":"", "id_str":"", "image_url":"", "video_url": ""]]
     
-    var kaks = Array<Kak>() {
-        didSet {
-            //tableView.reloadData()
-        }
-    }
+    var kaks = Array<Kak>()
     
     func loadKaks() {
         for i in 1...posts.count {
             if let kak = Kak(data: posts[i-1] as? NSDictionary) {
                 kaks.append(kak)
             }
-        }
-    }
-    
-    
-    var searchText: String? {
-        didSet {
-            title = searchText
         }
     }
     
@@ -84,7 +71,6 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
             }
         }
         sectionKeys = sections.keys.sort(<)
-        
         tableView.reloadData()
     }
     
@@ -146,4 +132,36 @@ class ProfileTableViewController: PFQueryTableViewController, UITextFieldDelegat
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "\(tagIndexes[section])"
     }
+    
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = tableView.dequeueReusableCellWithIdentifier("projectHeader")! as! ProfileProjectHeaderTableViewCell
+        header.delegate = self
+        
+        //And populate the header with the name of the account
+        header.projectHeaderButton?.setTitle(tagIndexes[section], forState: UIControlState.Normal)
+        //        header.projectHeaderButton?.currentTitle = tagIndexes[section]
+        //        header.textLabel?.textColor = UIColor.blackColor()
+        //        header.contentView.backgroundColor = UIColor.whiteColor()
+        return header
+    }
+    
+    func didSelectProfileProjectHeaderTableViewCell(Selected: Bool, ProfileProjectHeader: ProfileProjectHeaderTableViewCell) {
+        print("Cell Selected!");
+        performSegueWithIdentifier("showProjectPosts", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showProjectPosts" {
+            if let cell = sender as? ProfileProjectHeaderTableViewCell {
+                let project = cell.projectHeaderButton.currentTitle
+                if let tvc =  segue.destinationViewController as? ProfileProjectTableViewController {
+                    print("project is \(project)")
+                    tvc.project = project
+                }
+            }
+        }
+    }
 }
+
