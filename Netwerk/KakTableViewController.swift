@@ -53,6 +53,38 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         static let peregrindLogoImageAssetName = "Peregrind Logo"
     }
     
+//    
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
+//        let kakCell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath) as! KakTableViewCell
+//        let kakPost = object as! KakPost
+//        
+//        let kak = kaks[0]
+//        kakCell.kakImageView.file = kakPost.image
+//        kak.text = kakPost.comment!
+//        kakCell.kakPostLabel.numberOfLines = 0;
+//        kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
+//        
+//        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+//        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+//            kak.imageURL = NSURL(string: kakPost.user.objectForKey("faceBookProfilePicURL") as! String)!
+//            kak.user = kakPost.user.objectForKey("fullName") as! String
+//            kakCell.kakImageView.loadInBackground(nil) { percent in
+//                print("\(percent)% image loaded")
+//            }
+//            dispatch_async(dispatch_get_main_queue()) {
+//                kakCell.kak = kak
+//            }
+//        }
+//
+//        
+//        
+//        // TODO: set the label for the tag, something along the lines of this once there is a label in the storyboard
+////        if let tagText = kakPost.tag?.tagText {
+////            kakCell.kakTagLabel = tagText
+////        }
+//        
+//        return kakCell
+//    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
         let kakCell = tableView.dequeueReusableCellWithIdentifier(Storyboard.kakCellIdentifier, forIndexPath: indexPath) as! KakTableViewCell
@@ -64,27 +96,23 @@ class KakTableViewController: PFQueryTableViewController, UITextFieldDelegate {
         kakCell.kakPostLabel.numberOfLines = 0;
         kakCell.kakPostLabel.lineBreakMode = .ByWordWrapping;
         
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            kak.imageURL = NSURL(string: kakPost.user.objectForKey("faceBookProfilePicURL") as! String)!
-            kak.user = kakPost.user.objectForKey("fullName") as! String
-            kakCell.kakImageView.loadInBackground(nil) { percent in
-                print("\(percent)% image loaded")
-            }
-            dispatch_async(dispatch_get_main_queue()) {
-                kakCell.kak = kak
-            }
-        }
-
+        kak.imageURL = NSURL(string: kakPost.user.objectForKey("faceBookProfilePicURL") as! String)!
+        kak.user = kakPost.user.objectForKey("fullName") as! String
         
+        kakCell.kakImageView.loadInBackground(nil) { percent in
+            print("\(percent)% image loaded")
+        }
+        
+        kakCell.kak = kak
         
         // TODO: set the label for the tag, something along the lines of this once there is a label in the storyboard
-//        if let tagText = kakPost.tag?.tagText {
-//            kakCell.kakTagLabel = tagText
-//        }
+        //        if let tagText = kakPost.tag?.tagText {
+        //            kakCell.kakTagLabel = tagText
+        //        }
         
         return kakCell
     }
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // TODO: add segue to table view of other posts with same tag as this post
